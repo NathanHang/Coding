@@ -1,0 +1,45 @@
+import java.util.*;
+import java.lang.Math.*;
+
+public class Main
+{
+	public static void areaOfCircle(){
+	    Scanner s = new Scanner(System.in);
+	    double radiusOfCircle = 0.0;
+	    System.out.println("Radius of Circle: ");
+	    radiusOfCircle = s.nextDouble();
+	    System.out.println("Area of circle: " + Math.pow(radiusOfCircle, 2) * Math.PI);
+	}
+	public static void areaOfSquare(){
+	    Scanner s = new Scanner(System.in);
+	    double sideOfSquare = 0.0;
+	    System.out.println("Side value of Square: ");
+	    sideOfSquare = s.nextDouble();
+	    System.out.println("Area of Square: " + Math.pow(sideOfSquare, 2));
+	}
+	public static void areaOfRectangle(){
+	    Scanner s = new Scanner(System.in);
+	    double lengthOfRectangle = 0.0;
+	    double widthOfRectangle = 0.0;
+	    System.out.println("Length of the Rectangle(longer side): ");
+	    lengthOfRectangle = s.nextDouble();
+	    System.out.println("Width of the Rectangle(short side): ");
+	    widthOfRectangle = s.nextDouble();
+	    System.out.println("Area Of Rectangle: " + lengthOfRectangle * widthOfRectangle);
+	}
+	public static void volumeOfCube(){
+	    Scanner s = new Scanner(System.in);
+	    double sideOfCube = 0.0;
+	    System.out.println("Side value of the Cube: ");
+	    sideOfCube = s.nextDouble();
+	    System.out.println("Volume Of Cube: " + Math.pow(sideOfCube, 3));
+	}
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Welcome, were here can calculate the area of a circle, square, and a rectangle, and also calculate the volume of a cube.");
+	    areaOfCircle();
+	    areaOfSquare();
+	    areaOfRectangle();
+	    volumeOfCube();
+	}
+}
