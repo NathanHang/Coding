@@ -39,7 +39,8 @@ public class Main
 	}
 	public static void main(String[] args) {
 	    Scanner s = new Scanner(System.in);
-	    System.out.println("Welcome, here we calculate the area of a circle, square, and a rectangle, and also calculate the volume of a cube, to your desire.");
+	    System.out.println("Welcome, here we calculate the area of a circle, square, and a rectangle, and also calculate the volume of a cube.");
+	    System.out.println("In case if you do not need to calculate anything else, simply put 0.");
 	    areaOfCircle();
 	    areaOfSquare();
 	    areaOfRectangle();
