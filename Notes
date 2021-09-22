@@ -1,0 +1,20 @@
+//This code is about the ability to acess a variable outside of the function public static void.
+class A{
+    private int a = 10;
+    public void change()
+    {
+        a = 20;
+    }
+    public void p()
+    {
+        System.out.println(a);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		A obj = new A();
+		obj.change();
+		obj.p();
+	}
+}
