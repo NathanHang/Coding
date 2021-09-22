@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		String name;
+		int numberOfAs = 0, numberOfBs = 0, numberOfCs = 0, numberOfDs = 0, numberOfFs = 0;
+		int sumOfGrades = 0, numberOfStudents = 0, grade = 0;
+		double averageOfGrades;
+		
+		while(){
+		name = s.nextLine();
+		    if(grade > 100){
+		        continue;
+		    }
+		    else if(grade <= 0){
+		        continue;
+		    }
+		    else if(grade >= 90){
+		        numberOfAs = numberOfAs + 1;
+		        numberOfStudents = numberOfStudents + 1;
+		    }
+		    else if(grade >= 80){
+		        numberOfBs = numberOfBs + 1;
+		        numberOfStudents = numberOfStudents + 1;
+		    }
+		    else if(grade >= 70){
+		        numberOfCs = numberOfCs + 1;
+		        numberOfStudents = numberOfStudents + 1;
+		    }
+		    else if(grade >= 60){
+		        numberOfDs = numberOfDs + 1;
+		        numberOfStudents = numberOfStudents + 1;
+		    }
+		    else{
+		        numberOfFs = numberOfFs + 1;
+		        numberOfStudents = numberOfStudents + 1;
+		    }
+		}
+	}
+}
