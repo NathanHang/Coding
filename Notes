@@ -1,4 +1,4 @@
-//This code is about the ability to acess a variable outside of the function public static void.
+//This code is about java's ability to acess a variable outside of the function public static void, yet still inside of the class.
 class A{
     private int a = 10;
     public void change()
