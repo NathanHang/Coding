@@ -1,0 +1,44 @@
+// - means personal notes that my teacher said but didn't write down
+public class Main
+{
+    int age = 0;
+    Main(final int x) // A constructor as a function.
+    {
+        age = x;
+        System.out.println(age);
+    }
+	public static void main(String[] args) {
+		Main obj = new Main(5);// 5 = x
+		/* 
+		What is scanner?
+		Scanner is a class
+		What is s?
+		s is an object for the Scanner class.
+		It's just a name or it's just a VARIABLE name.
+		What is keyword "new"?
+		new -> say, it is a christmas time, if you want to eat dinner at ABC restaurant, you would reserve a table.
+		-In a same way, "new" reserves memory in the RAM.
+		-RAM is a computer component.
+		-RAM stands for Random-access memory.
+		new is basically reserving a fixed size in the RAM, at a specific location that Java doesn't.
+		new cares about pointers and address.
+		-main obj is a temporary object.
+		-main(); of main obj = new main(); is called a constructor.
+		-dont even meed public static void or public void for 
+		main(final int x)
+		{
+		    age = x;
+		    System.out.println("HI");
+		}
+		For new main(); need a return value for the variable age and the unknown value x = 5 to put main(5);
+		Because it is a constructor, you don't need public static void or public void.
+		C++ knowledge{ (brackets to represent that is about C++)
+		- std::cout = System.out.print
+		- std::endl = ln
+		- * knowing the value through &
+		- & is the address in the RAM
+		}
+		- Java does not the ability to output memory like C++
+		*/
+	}
+}
