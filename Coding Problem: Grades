@@ -8,11 +8,14 @@ public class Main
 		String name;
 		int numberOfAs = 0, numberOfBs = 0, numberOfCs = 0, numberOfDs = 0, numberOfFs = 0;
 		int sumOfGrades = 0, numberOfStudents = 0, grade = 0;
+		int numberOfTimesYouWantTheWhileLoopToIterateBasicallySayingTheAmountOfNumbersYouHave = 0, i = 0;
 		double averageOfGrades;
 		
-		while(){
+		numberOfTimesYouWantTheWhileLoopToIterateBasicallySayingTheAmountOfNumbersYouHave = s.nextInt();
+		
+		while(true){
 		name = s.nextLine();
-		    if(grade > 100){
+		    if(i <= numberOfTimesYouWantTheWhileLoopToIterateBasicallySayingTheAmountOfNumbersYouHave){
 		        continue;
 		    }
 		    else if(grade <= 0){
@@ -38,6 +41,10 @@ public class Main
 		        numberOfFs = numberOfFs + 1;
 		        numberOfStudents = numberOfStudents + 1;
 		    }
+		    sumOfGrades = sumOfGrades + grade;
+		    i++;
 		}
+        System.out.println(averageOfGrades = sumOfGrades / numberOfStudents);
 	}
 }
+
