@@ -1,0 +1,69 @@
+import java.util.*;
+import java.lang.Math.*;
+
+public class Main
+{
+	public static void areaOfCircle(){
+	    Scanner s = new Scanner(System.in);
+	    double radiusOfCircle = 0.0;
+	    System.out.println("Radius of Circle(pi = 3.14): ");
+	    radiusOfCircle = s.nextDouble();
+	    System.out.println("Area of circle: " + Math.pow(radiusOfCircle, 2) * 3.14);
+	    System.out.println("Radius of Circle(pi = Exact): ");
+	    radiusOfCircle = s.nextDouble();
+	    System.out.println("Area of circle: " + Math.pow(radiusOfCircle, 2) * Math.PI);
+	}
+	public static void areaOfSquare(){
+	    Scanner s = new Scanner(System.in);
+	    double sideOfSquare = 0.0;
+	    System.out.println("Side value of Square: ");
+	    sideOfSquare = s.nextDouble();
+	    System.out.println("Area of Square: " + Math.pow(sideOfSquare, 2));
+	}
+	public static void areaOfRectangle(){
+	    Scanner s = new Scanner(System.in);
+	    double lengthOfRectangle = 0.0;
+	    double widthOfRectangle = 0.0;
+	    System.out.println("Length of the Rectangle(longer side): ");
+	    lengthOfRectangle = s.nextDouble();
+	    System.out.println("Width of the Rectangle(short side): ");
+	    widthOfRectangle = s.nextDouble();
+	    System.out.println("Area Of Rectangle: " + lengthOfRectangle * widthOfRectangle);
+	}
+	public static void volumeOfCube(){
+	    Scanner s = new Scanner(System.in);
+	    double sideOfCube = 0.0;
+	    System.out.println("Side value of the Cube: ");
+	    sideOfCube = s.nextDouble();
+	    System.out.println("Volume Of Cube: " + Math.pow(sideOfCube, 3));
+	}
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int numberSelected = 0; 
+	    int i = 0;
+	    int numberOfCalculations = 0;
+	    System.out.println("Welcome, here we calculate the area of a circle, square, and a rectangle, and also calculate the volume of a cube.");
+	    System.out.println("If you want to calculate an area of a circle, put 1, a square, put 2, a rectangle, put 3, and for the volume of a cube, a 4.");
+	    numberSelected = s.nextInt();
+	    numberOfCalculations = s.nextInt();
+	    
+	    while(i <= numberOfCalculations){
+	        if(numberSelected == 1){
+	            areaOfCircle();
+	        }
+	        else if(numberSelected == 2){
+	            areaOfSquare();
+	        }
+	        else if(numberSelected == 3){
+	            areaOfRectangle();
+	        }
+	        else if(numberSelected == 4){
+	            volumeOfCube();
+	        }
+	        else{
+	            System.out.println("It seems you have made inputted a number outside of the limited areas and volumes, please retype the correct number.");
+	        }
+	        i++;
+	    }
+	}
+}
