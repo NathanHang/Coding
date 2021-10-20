@@ -1,4 +1,4 @@
-// Code that explains how to access private values outside of the main class.
+//Code that explains how to access private values outside of the main class.
 class a
 {
     private int k = 10;
@@ -24,8 +24,12 @@ public class Main
 		//Question: How can I use the print() function?
 		//Question: How can I set the variable private integer k to 10?
 		a obj = new a();
+		//Question #1 Solution
+		obj.print();
+		//Question #2 Solution
 		obj.set(10);
 		obj.p();
+		//Accessing variable b
 		/*
 		Main obja = new Main();
 		obja.b = 10;
