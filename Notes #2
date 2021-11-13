@@ -38,7 +38,7 @@ public class Main
 		- * knowing the value through &
 		- & is the address in the RAM
 		}
-		- Java does not the ability to output memory like C++
+		- Java does not have the ability to output memory like C++
 		*/
 	}
 }
