@@ -1,0 +1,30 @@
+public class Main
+{
+	public static void nameChecker(String name){
+	    String name = "Hiwdiwqqiw";
+	    int i = 0;
+	    while(i < name.length()){
+	       if(Character.isDigit(name.charAt(i)) == true){
+	           booleanName = true;
+	           System.out.println("Invalid Name" + " ");
+	           break;
+	       }
+	       i++;
+	    }
+	}
+	public static void ageChecker(int age){
+	    int age = 200;
+	    boolean booleanAge;
+	    if(age < 16 || age > 100){
+	        System.out.println("Invalid Age");
+	    }
+	}
+	public static void finalize(){
+	    if(booleanName = true){
+	        System.out.println
+	    }
+	}
+	public static void main(String[] args) {
+		finalize();
+	}
+}
