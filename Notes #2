@@ -1,4 +1,4 @@
-// - means personal notes that my teacher said but didn't write down
+// dash(-) means important things that my teacher said but didn't write down
 public class Main
 {
     int age = 0;
