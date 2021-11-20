@@ -1,7 +1,6 @@
 public class Main
-{
+{ 
 	public static void nameChecker(String name){
-	    String name = "Hiwdiwqqiw";
 	    int i = 0;
 	    while(i < name.length()){
 	       if(Character.isDigit(name.charAt(i)) == true){
@@ -19,12 +18,12 @@ public class Main
 	        System.out.println("Invalid Age");
 	    }
 	}
-	public static void finalize(){
-	    if(booleanName = true){
-	        System.out.println
-	    }
+	public static void finalize(boolean name, boolean age){
+	    
 	}
 	public static void main(String[] args) {
-		finalize();
+		String name = "Hiwdhwihduiewhfueiwf3j2wifjw";
+		int age = 200;
+		finalize(nameChecker(name), ageChecker(age));
 	}
 }
