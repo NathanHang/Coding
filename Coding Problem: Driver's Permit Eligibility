@@ -1,29 +1,40 @@
 public class Main
-{ 
-	public static void nameChecker(String name){
-	    int i = 0;
+{
+    public static boolean nameChecker(String name){
+        int i = 0;
+        boolean flag = false;
 	    while(i < name.length()){
-	       if(Character.isDigit(name.charAt(i)) == true){
-	           booleanName = true;
-	           System.out.println("Invalid Name" + " ");
-	           break;
-	       }
+	       flag = (Character.isDigit(name.charAt(i)));
+	       if(flag)
+	        break;
 	       i++;
 	    }
-	}
-	public static void ageChecker(int age){
-	    int age = 200;
-	    boolean booleanAge;
-	    if(age < 16 || age > 100){
-	        System.out.println("Invalid Age");
-	    }
-	}
-	public static void finalize(boolean name, boolean age){
-	    
-	}
+	    if(flag)
+	        return true;
+	    else
+	        return false;
+    }
+    public static boolean ageChecker(int age){
+        if(age >= 16 && age <= 100){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public static void finalize(boolean name, boolean age){
+        if(age)
+            System.out.println("Verified");
+        else
+            System.out.println("Not at an appropiate age");
+        if(name)
+            System.out.println("Not at an appropiate name");
+        else
+            System.out.println("Verified");
+    }
 	public static void main(String[] args) {
-		String name = "Hiwdhwihduiewhfueiwf3j2wifjw";
-		int age = 200;
+		String name = "Nathan";
+		int age = 23;
 		finalize(nameChecker(name), ageChecker(age));
 	}
 }
