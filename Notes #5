@@ -1,0 +1,16 @@
+import java.util.Vector;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Vector<Integer> numVec = new Vector<>();
+		numVec.add(10);
+		numVec.add(20);
+		numVec.add(30);
+		int i = 0;
+		while(i < numVec.size()){
+		    System.out.println(numVec.get(i));
+		    i++;
+		}
+	}
+}
