@@ -1,0 +1,17 @@
+//Notes about inheritance.
+//extends: The ability for a class to contain another classes whole code(functions, variables, etc.).
+class print
+{
+    public void p()
+    {
+        System.out.println("p function from print class");
+    }
+}
+
+public class Main extends print
+{
+	public static void main(String[] args) {
+		Main obj = new Main();
+		obj.p();
+	}
+}
