@@ -1,0 +1,18 @@
+//This shows how to use the Random package.
+//Output: 5 numbers either 0 or 1.
+
+import java.util.Random;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Random s = new Random();
+		int i = 2;
+		int j = 0;
+		while(j < 5){
+		    i = s.nextInt(2);
+		    System.out.print(i + " ");
+		    j++;
+		}
+	}
+}
