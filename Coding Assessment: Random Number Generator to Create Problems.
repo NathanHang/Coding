@@ -1,0 +1,21 @@
+/*
+Objective: Add or subtract a certain amount of terms,
+Necessary Requirements: Scanner, Vector, and Random packages.
+Notes: Random randomly generates numbers that to do this you nextInt()
+Thought Process:
+Scanner: For the user's amount of terms
+Random: For generating the numbers, using modulo(%) to either have a + or a -
+Vector: To store and simplify the amount of times you create the questions.
+*/
+import java.util.*;
+import java.util.Vector;
+import java.util.Random;
+
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+	Vector<Integer> AmountOfNumbers = new Vector<>();
+	Random randomGeneration = new Random();
+	}
+}
