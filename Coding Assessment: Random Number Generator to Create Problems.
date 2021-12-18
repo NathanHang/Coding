@@ -4,18 +4,49 @@ Necessary Requirements: Scanner, Vector, and Random packages.
 Notes: Random randomly generates numbers that to do this you nextInt()
 Thought Process:
 Scanner: For the user's amount of terms
-Random: For generating the numbers, using modulo(%) to either have a + or a -
+Random: For generating the numbers
 Vector: To store and simplify the amount of times you create the questions.
 */
 import java.util.*;
 import java.util.Vector;
 import java.util.Random;
 
+/*
+1) function that generate random number - > store it to the vector 
+
+2) figure it out how to print the sign with those random numbers
+
+3) check the answer 
+        -> figure it out the score board 
+        
+4) clear the vector 
+   clear vector function vec.clear() 
+   
+5) repeat 1 
+
+*/
+
+
 public class Main
 {
+
+	public static void a(){
+	    int generatedNumbers = 0;
+	    generatedNumbers = randomGeneration.nextInt(11);
+	}
 	public static void main(String[] args) {
-	Scanner s = new Scanner(System.in);
-	Vector<Integer> AmountOfNumbers = new Vector<>();
-	Random randomGeneration = new Random();
+	    Main obj = new Main();
+	    
+	    Scanner s = new Scanner(System.in);
+	    Vector<Integer> Storage = new Vector<>();
+	    Random randomGeneration = new Random();
+	    int amountOfTerms = 0;
+	    amountOfTerms = s.nextInt();
+	    
+	    Storage.add(generatedNumbers);
+	    
+	    while(i < amountOfTerms){
+	        a();
+	    }
 	}
 }
