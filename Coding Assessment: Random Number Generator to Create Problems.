@@ -27,26 +27,98 @@ import java.util.Random;
 */
 
 
+import java.util.*;
+import java.util.Vector;
+import java.util.Random;
+
 public class Main
 {
-
-	public static void a(){
-	    int generatedNumbers = 0;
-	    generatedNumbers = randomGeneration.nextInt(11);
-	}
-	public static void main(String[] args) {
-	    Main obj = new Main();
-	    
-	    Scanner s = new Scanner(System.in);
-	    Vector<Integer> Storage = new Vector<>();
-	    Random randomGeneration = new Random();
-	    int amountOfTerms = 0;
-	    amountOfTerms = s.nextInt();
-	    
-	    Storage.add(generatedNumbers);
-	    
-	    while(i < amountOfTerms){
-	        a();
-	    }
+    Random randGen = new Random();
+    Scanner s = new Scanner(System.in);
+    Vector<Integer> numVector = new Vector<>();
+    Vector<Integer> scoreBoard = new Vector<>();
+    int term;
+    
+    public void getScore()
+    {
+        int grade = 0;
+        for(int num : numVector)
+        {
+            grade += num;
+        }
+    }
+    public void checkAnswer()
+    {
+        int userAnswer = 0;
+        userAnswer = s.nextInt();
+        int answer = 0;
+        for(int num : numVector)
+        {
+            answer += num;
+        }
+        if(userAnswer == answer)
+        {
+            System.out.println("Correct");
+            scoreBoard.add(1);
+        }
+        else
+        {
+            System.out.println("Incorrect");
+            scoreBoard.add(0);
+        }
+    }
+    public void printEquation()
+    {
+        for(int i = 0; i < numVector.size(); i++)
+        {
+            if(i < numVector.size() - 1)
+                System.out.print(numVector.get(i) + " + ");
+            else
+                System.out.print(numVector.get(i));
+        }
+        System.out.println(" = ");
+    }
+    public void genNum()
+    {
+        for(int i = 0; i < term; i++)
+        {
+            numVector.add(randGen.nextInt(9) + 1);
+        }
+    }
+    public void checkTerms()
+    {
+        if(term > 5)
+            term = 5;
+        if(term < 2)
+            term = 2;
+    }
+    
+    public void menu()
+    {
+        int flag = 0;
+        System.out.println("Welcome to the math channel");
+        do
+        {
+            System.out.println("Enter number of terms 2 - 5? >> ");
+            term = s.nextInt();
+            checkTerms();
+            genNum();
+            printEquation();
+            checkAnswer();
+            System.out.println("Current score: ");
+            getScore();
+            System.out.println("Another one? 0 for no, 1 for yes.");
+            flag = s.nextInt();
+            numVector.clear();
+            if(flag == 0)
+            {
+                System.out.println("Bye");
+            }
+            
+        }while(flag != 0);
+    }
+    public static void main(String[] args) {
+		Main obj = new Main();
+		obj.menu();
 	}
 }
