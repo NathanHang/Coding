@@ -1,0 +1,11 @@
+//Basics.
+#include <iostream> //help you to print
+
+//using namespace std;
+
+int main() 
+{
+    std::cout<<"Hello World"; //Printing; \n is makes next line and std::endl skips the cursor to the next line; cout is print; std helps find cout
+
+    return 0; //Because it is an int main()
+}
