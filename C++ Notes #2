@@ -1,0 +1,22 @@
+#include <iostream> 
+
+using namespace std;
+
+int main() 
+{
+    /*
+    Data Types:
+    -int double char string boolean
+    -float short long long long unsigned short unsigned in
+    -unsigned long long unsigned double
+    -float and double -> decimal numbers
+    -int long long short -> integers
+    -bool -> True/false
+    -char -> ''
+    -string -> ""
+    */
+    int age = 10;
+    string name = "Kevin Eric Nathan";
+    cout << "Your name is " << name << ", your age is " << age << endl;
+    return 0;
+}
