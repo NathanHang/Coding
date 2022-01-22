@@ -1,0 +1,49 @@
+#include <iostream>
+
+int main()
+{
+    long userInput = 0, userSecondInput = 0, userThirdInput = 0, userFourthInput = 0;
+    int i = 1;
+    
+    std::cout << "First series: " << std::endl;
+    std::cout << "Input the amount of numbers you want to print > ";
+    std::cin >> userInput;
+    
+    while(i <= userInput){
+        std::cout << i << " ";
+        i++;
+    }
+    
+    std::cout << "\nSecond series: " << std::endl;
+    std::cout << "Input the initial number > ";
+    std::cin >> userSecondInput;
+    i = userSecondInput;
+    
+    while(i > 0){
+        std::cout << i << " ";
+        i--;
+    }
+    
+    i = 0;
+    
+    std::cout << "\nThird series: " << std::endl;
+    std::cout << "Input the amount of numbers you want to print > ";
+    std::cin >> userThirdInput;
+    
+    while(i < userThirdInput){
+        std::cout << 2 * i << " ";
+        i++;
+    }
+    
+    i = 0;
+    
+    std::cout << "\nFourth series: " << std::endl;
+    std::cout << "Input the amount of numbers you want to print > ";
+    std::cin >> userFourthInput;
+    
+    while(i < userFourthInput){
+        std::cout << 2 * i + 1 << " ";
+        i++;
+    }
+    return 0;
+}
