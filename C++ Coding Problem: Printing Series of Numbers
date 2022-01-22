@@ -7,7 +7,7 @@ int main()
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userInput;
     
-    for(int i = 0; i < userInput; i++){
+    for(int i = 1; i <= userInput; i++){
         std::cout << i << " ";
     }
     
@@ -15,7 +15,7 @@ int main()
     std::cout << "Input the initial number > ";
     std::cin >> userSecondInput;
     
-    for(int i = userSecondInput; i >= 0; i--){
+    for(int i = userSecondInput; i > 0; i--){
         std::cout << i << " ";
     }
     
