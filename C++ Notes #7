@@ -1,0 +1,27 @@
+#include <iostream>
+#include <limits.h>
+/*
+General idea of namespace:
+It is meant to identify variable and functions.
+*/
+
+namespace firstNamespace{
+    const int age = 10;
+    int getage(){
+        return age;
+    }
+}
+
+namespace secondNamespace{
+    const int age = 20;
+    int getage(){
+        return age;
+    }
+}
+int main()
+{
+    std::cout << "From the first namespace " << firstNamespace::getage();
+    std::cout << "\nFrom the second namespace " << secondNamespace::getage();
+    std::cout << std::endl;
+    return 0;
+}
