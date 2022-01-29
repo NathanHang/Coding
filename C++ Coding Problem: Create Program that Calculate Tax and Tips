@@ -11,10 +11,13 @@ Need to check:
 Sales tax: 10%
 
 Requirement: You must use functions
+
+Tax and the items are constants.
+
 */
 
-void salesTax(){
-    double tax = 0.1;
+void tips(double total){
+    ;
 }
 void calculateTips(){
     
