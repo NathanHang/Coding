@@ -1,0 +1,27 @@
+#include <iostream>
+/*
+I want a program that calculate the tips and the tax.
+You will have to create a menu, make up the price, log down the costs.
+
+Need to check:
+-Total before tax
+-Total after the tax
+-Suggest the tips: 10%, 15%, 20%, 25%
+
+Sales tax: 10%
+
+Requirement: You must use functions
+*/
+
+void salesTax(){
+    double tax = 0.1;
+}
+void calculateTips(){
+    
+}
+
+int main()
+{
+    
+    return 0;
+}
