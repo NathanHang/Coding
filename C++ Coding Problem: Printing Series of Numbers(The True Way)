@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main()
+{
+    int start, stop, step;
+    std::cout << "Enter start, stop, step for your loop > " << std::endl;
+    std::cin >> start >> stop >> step;
+    if(step > 0){
+        for(start; start < stop; start += step){
+            std::cout << start << " ";
+        }
+    }
+    else{
+        for(start; start > stop; start += step){
+            std::cout << start << " ";
+        }
+    }
+    return 0;
+}
