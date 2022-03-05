@@ -28,7 +28,9 @@ void Rectangle::setWidth(const int w){
 
 int main()
 {
-    Rectangle recObj(5, 10);
+    Rectangle recObj();
+    recObj.setHeight(20);
+    recObj.setWidth(10);
     recObj.solveArea();
 
     return 0;
