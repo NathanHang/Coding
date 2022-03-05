@@ -1,24 +1,29 @@
-//How to use class in C++.
-
+//How to use class in C++, part 2.
 /*
-Things to note:
--Values in a class are always private, unless specified to be public like in the code.
--The statement: Rectangle(int width, int height) : width(width), height(height), is a constructor
--A consturctor exist just to be there, that anyone could use at any time, but it simply just exists.
+H and W equating to its respective labels.
 */
 #include <iostream>
 
 class Rectangle {
+    private:
     int width, height;
     public:
-        Rectangle(int width, int height) : width(width), height(height) {
-            std::cout << "This is a constructor" << std::endl;
-        }
         void solveArea();
+        void setWidth(const int w);
+        void setHeight(const int h);
+
 };
 
 void Rectangle::solveArea(){
     std::cout << "The area is: " << width*height << std::endl;
+}
+
+void Rectangle::setHeight(const int h){
+    height = h;
+}
+
+void Rectangle::setWidth(const int w){
+    width = w;
 }
 
 int main()
