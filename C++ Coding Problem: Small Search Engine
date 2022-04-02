@@ -13,11 +13,13 @@ Teacher's Hints:
 */
 #include <iostream>
 #include <vector>
+#include <stdlib.h>
 
 using namespace std;
 
 int main()
 {
+    int dampingFactor = 0.85;
     vector<vector<double>> graph
     {
         {0,0, 0,0, 1.0, 0.0, 0.0},
