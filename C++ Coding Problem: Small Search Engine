@@ -10,6 +10,13 @@ Teacher's Hints:
 -Nested For Loop to do the math
 -Consider when the values converge, and print them out
 -When the pages are converged, stop the program
+Equation:
+Page Rank(of Page) = d*M*Pi + const
+const = (1-d)/N
+d = dampingFactor
+N = number of Pages(there are 5 per page)
+M = Matrix of Problem
+Pi = unknown
 */
 #include <iostream>
 #include <vector>
