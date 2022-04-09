@@ -14,7 +14,7 @@ Equation:
 Page Rank(of Page) = d*M*Pi + const
 const = (1-d)/N
 d = dampingFactor
-N = number of Pages(there are 5 per page)
+N = number of Pages(there are 5 pages)
 M = Matrix of Problem
 Pi = unknown
 */
@@ -26,7 +26,8 @@ using namespace std;
 
 int main()
 {
-    int dampingFactor = 0.85;
+    int dampingFactor = 0.85, numOfPages = 5, const = 0;
+    const = (1 - dampingFactor)/5;
     
     vector<vector<double>> graph
     {
