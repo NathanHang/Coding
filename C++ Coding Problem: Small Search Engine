@@ -28,6 +28,7 @@ int main()
 {
     int dampingFactor = 0.85, numOfPages = 5, const = 0;
     const = (1 - dampingFactor)/5;
+    int epilson = 0.0001;
     
     vector<vector<double>> graph
     {
@@ -38,6 +39,7 @@ int main()
         {0.0, 0.5, 0.0, 1.0, 1.0}
     };
     int pi[] = {1, 1, 1, 1, 1};
+    bool converge = {False, False, False, False, False
     cout << "Matrix for Problem" << endl;
     for(int i = 0; i < graph.size(); i++){
         for(int j = 0; j < graph[i].size(); j++){
@@ -50,6 +52,7 @@ int main()
     for(int i = 0; i < sizeof(pi)/sizeof(pi[0]); i++){
         cout << pi[i] << " ";
     }
+    
     
     return 0;
 }
