@@ -26,8 +26,9 @@ using namespace std;
 
 int main()
 {
-    int dampingFactor = 0.85, numOfPages = 5, const = 0;
-    const = (1 - dampingFactor)/5;
+    int dampingFactor = 0.85, constant = 0, dotProduct = 0, pageRank = 0;
+    int i = 0, j = 0;
+    constant = (1 - dampingFactor)/5;
     int epilson = 0.0001;
     
     vector<vector<double>> graph
@@ -39,11 +40,14 @@ int main()
         {0.0, 0.5, 0.0, 1.0, 1.0}
     };
     int pi[] = {1, 1, 1, 1, 1};
-    bool converge[]= {False, False, False, False, False};
+    
+    int converge[]= {0, 0, 0, 0, 0};
+    
     cout << "Matrix for Problem" << endl;
     for(int i = 0; i < graph.size(); i++){
+        cout << "row " << i + 1 << ": ";
         for(int j = 0; j < graph[i].size(); j++){
-            cout << graph[i][j] << " ";
+            cout << "column " << j + 1 << ": " << graph[i][j] << ", ";
         }
         cout << endl;
     }
@@ -53,6 +57,21 @@ int main()
         cout << pi[i] << " ";
     }
     
+    while( != graph.size()){
+        for(i = 0; i < graph.size(); i++){
+            dotProduct = 0;
+            if(converge[i] == 0){
+                for(j = 0; i < graph[i].size(); j++){
+                    dotProduct += graph[i][j] * pi[i][j]
+                }
+                pageRank = dampingFactor * dotProduct + constant
+                if(abs(pageRank - pi[i]) < epilson){
+                    converge[i] = 1;
+                }
+                pi[i] = pageRank;
+            }
+        }
+    }
     
     return 0;
 }
