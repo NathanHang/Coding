@@ -1,3 +1,4 @@
+**WORK IN PROGRESS**
 /*
 The Matrix of the problem:
     1   2   3   4   5
@@ -26,10 +27,8 @@ using namespace std;
 
 int main()
 {
-    int dampingFactor = 0.85, constant = 0, dotProduct = 0, pageRank = 0;
-    int i = 0, j = 0;
-    constant = (1 - dampingFactor)/5;
-    int epilson = 0.0001;
+    double dampingFactor = 0.85, constant = 0.0, dotProduct = 0.0, pageRank = 0.0, epilson = 0.0001;
+    int sumOfConvergeArray = 0;
     
     vector<vector<double>> graph
     {
@@ -39,11 +38,12 @@ int main()
         {0.0, 0.0, 0.0, 0.0, 0.0},
         {0.0, 0.5, 0.0, 1.0, 1.0}
     };
-    int pi[] = {1, 1, 1, 1, 1};
+    double pi[] = {1.0, 1.0, 1.0, 1.0, 1.0};
     
     int converge[]= {0, 0, 0, 0, 0};
     
-    cout << "Matrix for Problem" << endl;
+    constant = (1 - dampingFactor)/graph.size();
+    cout << "Matrix for Problem: " << endl;
     for(int i = 0; i < graph.size(); i++){
         cout << "row " << i + 1 << ": ";
         for(int j = 0; j < graph[i].size(); j++){
@@ -56,22 +56,28 @@ int main()
     for(int i = 0; i < sizeof(pi)/sizeof(pi[0]); i++){
         cout << pi[i] << " ";
     }
+    cout << endl;
+    cout << endl;
     
-    while( != graph.size()){
-        for(i = 0; i < graph.size(); i++){
+    while(sumOfConvergeArray != graph.size()){
+        sumOfConvergeArray = 0;
+        for(int i = 0; i < graph.size(); i++){
             dotProduct = 0;
             if(converge[i] == 0){
-                for(j = 0; i < graph[i].size(); j++){
-                    dotProduct += graph[i][j] * pi[i][j]
+                for(int j = 0; j < graph[i].size(); j++){
+                    dotProduct += graph[i][j] * pi[j];
                 }
-                pageRank = dampingFactor * dotProduct + constant
+                pageRank = dampingFactor * dotProduct + constant;
                 if(abs(pageRank - pi[i]) < epilson){
                     converge[i] = 1;
+                    sumOfConvergeArray += converge[i];
                 }
                 pi[i] = pageRank;
             }
         }
+        cout << endl;
     }
+    cout << "Sum of Converge Array: " << sumOfConvergeArray;
     
     return 0;
 }
