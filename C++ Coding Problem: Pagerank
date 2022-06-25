@@ -26,7 +26,7 @@ using namespace std;
 
 int main()
 {
-    double dampingFactor = 0.85, constant = 0.0, dotProduct = 0.0, pageRank = 0.0, epilson = 0.0001;
+    double dampingFactor = 0.85, constant = 0.0, dotProduct = 0.0, pageRank = 0.0, epilson = 0.0;
     int sumOfConvergeArray = 0;
     double estimatedProbability = 0;
     
@@ -41,6 +41,7 @@ int main()
     double pi[] = {1.0, 1.0, 1.0, 1.0, 1.0};
     
     int converge[]= {0, 0, 0, 0, 0};
+    int iteration[] = {0, 0, 0, 0, 0};
     
     constant = (1 - dampingFactor)/graph.size();
     cout << "Matrix for Problem: " << endl;
@@ -61,6 +62,13 @@ int main()
             cout << pi[i];
         }
     }
+    
+    cout << endl;
+    cout << endl;
+    
+    cout << "Input Epsilon:" << endl;
+    cin >> epilson;
+    
     cout << endl;
     cout << endl;
     
@@ -76,6 +84,9 @@ int main()
                     converge[i] = 1;
                     sumOfConvergeArray += converge[i];
                 }
+                else{
+                    iteration[i] += 1;
+                }
                 pi[i] = pageRank;
             }
         }
@@ -89,6 +100,20 @@ int main()
             cout << "Page " << i + 1 << ": " << pi[i];
         }
     }
+    
+    cout << endl;
+    cout << endl;
+    
+    cout << "Iterations to converge:" << endl;
+    for(int i = 0; i < sizeof(iteration)/sizeof(iteration[0]); i++){
+        if(i < sizeof(iteration)/sizeof(iteration[0]) - 1){
+            cout << "Page " << i + 1 << ": " << iteration[i] << ", ";
+        }
+        else{
+            cout << "Page " << i + 1 << ": " << iteration[i];
+        }
+    }
+    
     for(int i = 0; i < sizeof(pi)/sizeof(pi[0]); i++){
         estimatedProbability += pi[i];
     }
@@ -98,11 +123,6 @@ int main()
     
     cout << "Added page rank values:" << endl;
     cout << estimatedProbability;
-    
-    cout << endl;
-    cout << endl;
-    
-    cout << "Sum of Converge Array: " << sumOfConvergeArray;
     
     return 0;
 }
