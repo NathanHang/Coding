@@ -6,45 +6,61 @@ My solution according of what was asked of the problem. For loop version.
 int main()
 {
     long userInput = 0, userSecondInput = 0, userThirdInput = 0, userFourthInput = 0;
-    std::cout << "First series(Incrementation by 1 starting from 1): " << std::endl;
+    int i = 1;
+    
+    std::cout << "First series: " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userInput;
+    std::cout << "Result: ";
     
-    for(int i = 1; i <= userInput; i++){
+    while(i <= userInput){
         std::cout << i << " ";
+        i++;
     }
     
-    std::cout << endl;
-    std::cout << endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
     
-    std::cout << "Second series(Decrementation by 1 starting from any number until at 1): " << std::endl;
+    std::cout << "Second series: " << std::endl;
     std::cout << "Input the initial number > ";
     std::cin >> userSecondInput;
+    std::cout << "Result: ";
     
-    for(int i = userSecondInput; i >= 1; i--){
+    i = userSecondInput;
+    
+    while(i > 0){
         std::cout << i << " ";
+        i--;
     }
     
-    std::cout << endl;
-    std::cout << endl;
+    i = 0;
     
-    std::cout << "Third series(Incrementation by 2 starting from 0): " << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    
+    std::cout << "Third series: " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userThirdInput;
+    std::cout << "Result: ";
     
-    for(int i = 0; i < userThirdInput; i++){
+    while(i < userThirdInput){
         std::cout << 2 * i << " ";
+        i++;
     }
     
-    std::cout << endl;
-    std::cout << endl;
+    i = 0;
     
-    std::cout << "Fourth series(Incrementation by 2 starting from 1): " << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    
+    std::cout << "Fourth series: " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userFourthInput;
+    std::cout << "Result: ";
     
-    for(int i = 0; i < userFourthInput; i++){
+    while(i < userFourthInput){
         std::cout << 2 * i + 1 << " ";
+        i++;
     }
     return 0;
 }
