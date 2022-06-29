@@ -1,5 +1,5 @@
 /*
-My solution according of what was asked of the problem.
+My solution according of what was asked of the problem. For loop version.
 */
 #include <iostream>
 
@@ -14,15 +14,21 @@ int main()
         std::cout << i << " ";
     }
     
-    std::cout << "\nSecond series(Decremetation by 1 starting from any number): " << std::endl;
+    std::cout << endl;
+    std::cout << endl;
+    
+    std::cout << "Second series(Decrementation by 1 starting from any number until at 1): " << std::endl;
     std::cout << "Input the initial number > ";
     std::cin >> userSecondInput;
     
-    for(int i = userSecondInput; i > 0; i--){
+    for(int i = userSecondInput; i >= 1; i--){
         std::cout << i << " ";
     }
     
-    std::cout << "\nThird series(Incrementation by 2 starting from 0): " << std::endl;
+    std::cout << endl;
+    std::cout << endl;
+    
+    std::cout << "Third series(Incrementation by 2 starting from 0): " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userThirdInput;
     
@@ -30,7 +36,10 @@ int main()
         std::cout << 2 * i << " ";
     }
     
-    std::cout << "\nFourth series(Incrementation by 2 starting from 1): " << std::endl;
+    std::cout << endl;
+    std::cout << endl;
+    
+    std::cout << "Fourth series(Incrementation by 2 starting from 1): " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userFourthInput;
     
