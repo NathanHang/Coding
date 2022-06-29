@@ -1,4 +1,6 @@
 /*
+This variation is when the converge array is an int, basically a minor change/variant.
+
 The Matrix of the problem:
     1   2   3   4   5
 1   0   0   1   0   0
