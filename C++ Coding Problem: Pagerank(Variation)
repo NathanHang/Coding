@@ -8,7 +8,7 @@ The Matrix of the problem:
 3   0   1/2 0   0   0
 4   0   0   0   0   0
 5   0   1/2 0   1   1
-Teacher's Hints:
+Hints(that helped me):
 -Nested For Loop to do the math
 -Consider when the values converge, and print them out
 -When the pages are converged, stop the program
