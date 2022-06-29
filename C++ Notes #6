@@ -2,7 +2,7 @@
 #include <limits.h>
 /*
 General idea of namespace:
-It is meant to identify variable and functions.
+It is meant to identify variables and functions.
 */
 
 namespace firstNamespace{
