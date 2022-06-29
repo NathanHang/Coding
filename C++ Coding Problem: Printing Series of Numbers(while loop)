@@ -1,3 +1,6 @@
+/*
+My answer according of what was asked of the problem. While loop version.
+*/
 #include <iostream>
 
 int main()
@@ -14,10 +17,14 @@ int main()
         i++;
     }
     
-    std::cout << "\nSecond series: " << std::endl;
+    std::cout << "Second series: " << std::endl;
     std::cout << "Input the initial number > ";
     std::cin >> userSecondInput;
+    
     i = userSecondInput;
+    
+    std::cout << std::endl;
+    std::cout << std::endl;
     
     while(i > 0){
         std::cout << i << " ";
@@ -26,7 +33,10 @@ int main()
     
     i = 0;
     
-    std::cout << "\nThird series: " << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    
+    std::cout << "Third series: " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userThirdInput;
     
@@ -36,6 +46,9 @@ int main()
     }
     
     i = 0;
+    
+    std::cout << std::endl;
+    std::cout << std::endl;
     
     std::cout << "\nFourth series: " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
