@@ -1,9 +1,6 @@
 /*
 My answer according of what was asked of the problem. While loop version.
 */
-/*
-My solution according of what was asked of the problem. For loop version.
-*/
 #include <iostream>
 
 int main()
