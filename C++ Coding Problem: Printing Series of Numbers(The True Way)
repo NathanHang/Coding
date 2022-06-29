@@ -1,3 +1,6 @@
+/*
+This is the true way of doing the printing problem, basically my teacher's answer.
+*/
 #include <iostream>
 
 int main()
