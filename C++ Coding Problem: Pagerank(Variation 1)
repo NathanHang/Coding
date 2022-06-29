@@ -1,6 +1,4 @@
 /*
-This variation is when the converge array is an int, basically a minor change/variant.
-
 The Matrix of the problem:
     1   2   3   4   5
 1   0   0   1   0   0
@@ -8,7 +6,7 @@ The Matrix of the problem:
 3   0   1/2 0   0   0
 4   0   0   0   0   0
 5   0   1/2 0   1   1
-Teacher's Hints:
+Hints(that helped me)/Key factors of pagerank:
 -Nested For Loop to do the math
 -Consider when the values converge, and print them out
 -When the pages are converged, stop the program
