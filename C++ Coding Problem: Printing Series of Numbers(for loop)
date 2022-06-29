@@ -9,6 +9,7 @@ int main()
     std::cout << "First series(Incrementation by 1 starting from 1): " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userInput;
+    std::cout << "Result: ";
 
     for(int i = 1; i <= userInput; i++){
         std::cout << i << " ";
@@ -20,6 +21,7 @@ int main()
     std::cout << "Second series(Decrementation by 1 starting from any number until at 1): " << std::endl;
     std::cout << "Input the initial number > ";
     std::cin >> userSecondInput;
+    std::cout << "Result: ";
     
     for(int i = userSecondInput; i >= 1; i--){
         std::cout << i << " ";
@@ -31,6 +33,7 @@ int main()
     std::cout << "Third series(Incrementation by 2 starting from 0): " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userThirdInput;
+    std::cout << "Result: ";
 
     for(int i = 0; i < userThirdInput; i++){
         std::cout << 2 * i << " ";
@@ -42,6 +45,7 @@ int main()
     std::cout << "Fourth series(Incrementation by 2 starting from 1): " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userFourthInput;
+    std::cout << "Result: ";
 
     for(int i = 0; i < userFourthInput; i++){
         std::cout << 2 * i + 1 << " ";
