@@ -1,9 +1,12 @@
+/*
+My solution according of what was asked of the problem.
+*/
 #include <iostream>
 
 int main()
 {
     long userInput = 0, userSecondInput = 0, userThirdInput = 0, userFourthInput = 0;
-    std::cout << "First series: " << std::endl;
+    std::cout << "First series(Incrementation by 1 starting from 1): " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userInput;
     
@@ -11,7 +14,7 @@ int main()
         std::cout << i << " ";
     }
     
-    std::cout << "\nSecond series: " << std::endl;
+    std::cout << "\nSecond series(Decremetation by 1 starting from any number): " << std::endl;
     std::cout << "Input the initial number > ";
     std::cin >> userSecondInput;
     
@@ -19,7 +22,7 @@ int main()
         std::cout << i << " ";
     }
     
-    std::cout << "\nThird series: " << std::endl;
+    std::cout << "\nThird series(Incrementation by 2 starting from 0): " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userThirdInput;
     
@@ -27,7 +30,7 @@ int main()
         std::cout << 2 * i << " ";
     }
     
-    std::cout << "\nFourth series: " << std::endl;
+    std::cout << "\nFourth series(Incrementation by 2 starting from 1): " << std::endl;
     std::cout << "Input the amount of numbers you want to print > ";
     std::cin >> userFourthInput;
     
