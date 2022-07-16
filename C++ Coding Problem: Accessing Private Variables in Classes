@@ -29,7 +29,7 @@ void Name::printName(){
     std::cout << name << std::endl;
 }
 
-int main(int argc, char *argv[])
+int main()
 {
     Name accessClassName;
     
