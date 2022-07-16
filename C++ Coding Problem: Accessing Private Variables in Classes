@@ -1,0 +1,41 @@
+/*
+-Condition 1: All variables are private
+-Condition 2: There is only one variable which is "name"
+-Condition 3: No lines of code is to be removed from the main, but there is one additional line of code
+
+Objective: Set the name into the input
+
+Private is when all of the information that is stored inside of a class is only akin to merely itself(no other class or the main can use it)
+Public is when the information of a class is able to be accessed throughout the main and other classes
+
+The method that is able to able private information of class through the means of public informaiton of that same class is called the setter/getter method
+*/
+#include <iostream>
+
+class Name{
+        std::string name;
+    
+        public:
+            void setName();
+            void printName();
+};
+
+void Name::setName(){
+    std::cout << "Input Name: ";
+    std::cin >> name;
+}
+
+void Name::printName(){
+    std::cout << name << std::endl;
+}
+
+int main(int argc, char *argv[])
+{
+    Name accessClassName;
+    
+    accessClassName.setName();
+    
+    accessClassName.printName();
+    
+    return 0;
+}
