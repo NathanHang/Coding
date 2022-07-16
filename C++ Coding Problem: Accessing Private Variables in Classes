@@ -8,6 +8,9 @@ Objective: Set the name into the input
 Private is when all of the information that is stored inside of a class is only akin to merely itself(no other class or the main can use it)
 Public is when the information of a class is able to be accessed throughout the main and other classes
 
+Questions:
+-Does inheritance matter? No
+
 The method that is able to able private information of class through the means of public informaiton of that same class is called the setter/getter method
 */
 #include <iostream>
@@ -21,11 +24,12 @@ class Name{
 };
 
 void Name::setName(){
-    std::cout << "Input Name: ";
+    std::cout << "Input: " << std::endl;
     std::cin >> name;
 }
 
 void Name::printName(){
+    std::cout << "Your Input is: " << std::endl;
     std::cout << name << std::endl;
 }
 
@@ -34,6 +38,8 @@ int main()
     Name accessClassName;
     
     accessClassName.setName();
+    
+    std::cout << std::endl;
     
     accessClassName.printName();
     
