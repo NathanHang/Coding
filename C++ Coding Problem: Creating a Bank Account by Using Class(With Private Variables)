@@ -1,0 +1,29 @@
+#include <iostream>
+
+class BankAccount{
+    double totalAmountOfMoney, depositedAmount, withdrawnAmount;
+    public:
+    void initialDeposit();
+    void deposit();
+    void withdraw();
+    void current();
+    void Exit();
+};
+
+void BankAccount::deposit(){
+    std::cout << "Enter deposited amount: " << std::endl;
+    std::cin >> depositedAmount;
+    totalAmountOfMoney += depositedAmount
+}
+
+void BankAccount::withdraw(){
+    std::cout << "Enter the amount of money you want to withdraw: " << std::endl;
+    std::cin >> withdrawnAmount;
+    totalAmountOfMoney -= withdrawnAmount;
+}
+
+int main(int argc, char* argv[])
+{
+
+    return 0;
+}
