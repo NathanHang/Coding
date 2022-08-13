@@ -1,0 +1,44 @@
+#include <iostream>
+ 
+using namespace std;
+
+int main()
+{
+    string wordsKeeper[100] = {};
+    int inputs = 0;
+    string words;
+    int amountOfLetters;
+  
+    cout << "Input the desired amount of words(100 inputs is the maximum): " << endl;
+    cin >> inputs;
+
+    for(int i = 0; true; i++){
+        if(inputs < 1 || inputs > 100){
+        cout << "You have entered a value greater than 100 or less than 1. Please try again: " << endl;
+        cin >> inputs;
+        }
+        else{
+        break;
+        }
+    }
+
+    for(int i = 0; i < inputs; i++){
+        cin >> words;
+        wordsKeeper[i] = words;
+        }
+ 
+    cout << endl;
+
+    for(int i = 0; i < inputs; i++){
+        amountOfLetters = wordsKeeper[i].size();
+        words = wordsKeeper[i];
+        if(amountOfLetters <= 10){
+        cout << words << endl;
+        }
+        else{
+        cout << words[0] << amountOfLetters - 2 << words.back() << endl;
+        }
+    }
+    
+    return 0; 
+}
