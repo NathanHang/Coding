@@ -1,3 +1,9 @@
+/*
+An assignment given to me by my teacher. 
+It was meant to abbreviate long words(longer than 10 letters):
+Into their first letter, number of letters between the first letter and the last letter, then the last letter.
+Example: Antidisestablishmentarianism -> a26m
+*/
 #include <iostream>
  
 using namespace std;
@@ -14,18 +20,18 @@ int main()
 
     for(int i = 0; true; i++){
         if(inputs < 1 || inputs > 100){
-        cout << "You have entered a value greater than 100 or less than 1. Please try again: " << endl;
-        cin >> inputs;
+            cout << "You have entered a value greater than 100 or less than 1. Please try again: " << endl;
+            cin >> inputs;
         }
         else{
-        break;
+            break;
         }
     }
 
     for(int i = 0; i < inputs; i++){
         cin >> words;
         wordsKeeper[i] = words;
-        }
+    }
  
     cout << endl;
 
@@ -33,10 +39,10 @@ int main()
         amountOfLetters = wordsKeeper[i].size();
         words = wordsKeeper[i];
         if(amountOfLetters <= 10){
-        cout << words << endl;
+            cout << words << endl;
         }
         else{
-        cout << words[0] << amountOfLetters - 2 << words.back() << endl;
+            cout << words[0] << amountOfLetters - 2 << words.back() << endl;
         }
     }
     
