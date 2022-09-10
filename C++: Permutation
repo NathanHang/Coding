@@ -1,0 +1,59 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    unsigned long long int factorial = 0;
+    unsigned long long int answer1 = 1, answer2 = 1;
+    unsigned long long int objectsActuallyPermutated = 0;
+    unsigned long long int permutation = 9;
+    
+    cout << "Enter amount of objects: ";
+    cin >> factorial;
+    
+    cout << endl;
+    
+    cout << "Enter the amount of objects being permutated: ";
+    cin >> objectsActuallyPermutated;
+    
+    cout << endl;
+    
+    while(true){
+        if(objectsActuallyPermutated > factorial){
+            cout << "You have entered a value of the amount of objects that are being permutated greater than how many objects there actually are. Enter a valid amount: ";
+            cin >> objectsActuallyPermutated;
+        }
+        else{
+            break;
+        }
+    }
+    
+    for(unsigned long long int i = factorial; i > 0; i--){
+        if(factorial == 0){
+            answer1 = 1;
+            break;
+        }
+        else{
+            answer1 *= i;
+        }
+    }
+    
+    for(unsigned long long int i = factorial - objectsActuallyPermutated; i > 0; i--){
+        if(factorial - objectsActuallyPermutated == 0){
+            answer2 = 1;
+            break;
+        }
+        else{
+            answer2 *= i;
+        }
+    }
+    
+    cout << endl;
+    
+    cout << "The result is: " << endl;
+    cout << answer1 / answer2;
+
+    return 0;
+}
+
