@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int> ArrayMerger(vector<int> &vec1, vector<int> &vec2, vector<int> &vec3){
+        int ElementComparisonForVectorA = 0;
+        int ElementComparisonForVectorB = 0;
+        for(int i = 0; i < vec3.size(); i++){
+                if(vec1[ElementComparisonForVectorA] < vec2[ElementComparisonForVectorB]){
+                        vec3[i] = vec1[ElementComparisonForVectorA];
+                        ElementComparisonForVectorA += 1;
+                }
+                else{
+                        vec3[i] = vec2[ElementComparisonForVectorB];
+                        ElementComparisonForVectorB += 1;
+                }
+        }
+        return vec3;
+}
+
+int main(){
+        vector<int> a {1, 4, 6, 7, 8, 9, 10, 14, 49};
+        vector<int> b {2, 3, 5, 11, 23, 25, 27, 29, 34};
+        vector<int> c (a.size() + b.size() - 1, 0);
+
+        ArrayMerger(a, b, c);
+        cout << "First Array: ";
+        for(int i = 0; i < a.size(); i++){
+                cout << a[i] << " ";
+        }
+        cout << endl;
+        cout << "Second Array: ";
+        for(int i = 0; i < b.size(); i++){
+                cout << b[i] << " ";
+        }
+        cout << endl;
+        cout << "Merged Array: ";
+        for(int i = 0; i < c.size(); i++){
+                cout << c[i] << " ";
+        }
+        cout << endl;
+        return 0;
+}
+                                                                                                                                         
