@@ -7,13 +7,25 @@ vector<int> ArrayMerger(vector<int> &vec1, vector<int> &vec2, vector<int> &vec3)
         int ElementComparisonForVectorA = 0;
         int ElementComparisonForVectorB = 0;
         for(int i = 0; i < vec3.size(); i++){
-                if(vec1[ElementComparisonForVectorA] < vec2[ElementComparisonForVectorB]){
-                        vec3[i] = vec1[ElementComparisonForVectorA];
-                        ElementComparisonForVectorA += 1;
+                if(ElementComparisonForVectorA == vec1.size() || ElementComparisonForVectorB == vec2.size()){
+                        if(ElementComparisonForVectorA == vec1.size()){
+                                vec3[i] = vec2[ElementComparisonForVectorB];
+                                ElementComparisonForVectorB += 1;
+                        }
+                        else{
+                                vec3[i] = vec1[ElementComparisonForVectorA];
+                                ElementComparisonForVectorA += 1;
+                        }
                 }
                 else{
-                        vec3[i] = vec2[ElementComparisonForVectorB];
-                        ElementComparisonForVectorB += 1;
+                        if(vec1[ElementComparisonForVectorA] < vec2[ElementComparisonForVectorB]){
+                                vec3[i] = vec1[ElementComparisonForVectorA];
+                                ElementComparisonForVectorA += 1;
+                        }
+                        else{
+                                vec3[i] = vec2[ElementComparisonForVectorB];
+                                ElementComparisonForVectorB += 1;
+                        }
                 }
         }
         return vec3;
