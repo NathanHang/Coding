@@ -28,6 +28,12 @@ vector<int> ArrayMerger(vector<int> &vec1, vector<int> &vec2, vector<int> &vec3)
                         }
                 }
         }
+        if(vec3.size() % 2 == 0){
+                cout << "Median of the Arrays: " << vec3[vec3.size()/2] << endl;
+        }
+        else{
+                cout << "Median of the Arrays: " << (vec3[vec3.size()/2] + vec3[vec3.size()/2 + 1]) << endl;
+        }
         return vec3;
 }
 
