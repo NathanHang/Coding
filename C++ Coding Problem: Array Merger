@@ -20,7 +20,7 @@ double ArrayMergerAndMedianFinder(vector<int> & nums1, vector<int> & nums2){
                         }
                 }
                 else{
-                        if(vec1[ElementComparisonForVectorA] < vec2[ElementComparisonForVectorB]){
+                        if(nums1[ElementComparisonForVectorA] < nums2[ElementComparisonForVectorB]){
                                 vec3[i] = nums1[ElementComparisonForVectorA];
                                 ElementComparisonForVectorA += 1;
                         }
