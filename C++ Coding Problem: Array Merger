@@ -3,7 +3,8 @@
 
 using namespace std;
 
-vector<int> ArrayMerger(vector<int> &vec1, vector<int> &vec2, vector<int> &vec3){
+double ArrayMergerAndMedianFinder(vector<int> &vec1, vector<int> &vec2, double Median){
+        vector<int> vec3 (vec1.size() + vec2.size(), 0);
         int ElementComparisonForVectorA = 0;
         int ElementComparisonForVectorB = 0;
         for(int i = 0; i < vec3.size(); i++){
@@ -28,36 +29,41 @@ vector<int> ArrayMerger(vector<int> &vec1, vector<int> &vec2, vector<int> &vec3)
                         }
                 }
         }
+
+        cout << "First Array: ";
+        for(int i = 0; i < vec1.size(); i++){
+                cout << vec1[i] << " ";
+        }
+
+        cout << endl;
+        cout << "Second Array: ";
+        for(int i = 0; i < vec2.size(); i++){
+                cout << vec2[i] << " ";
+        }
+
+        cout << endl;
+        cout << "Merged Array: ";
+        for(int i = 0; i < vec3.size(); i++){
+                cout << vec3[i] << " ";
+        }
+        cout << endl;
         if(vec3.size() % 2 == 0){
-                cout << "Median of the Arrays: " << vec3[vec3.size()/2] << endl;
+                Median = vec3[vec3.size()/2];
         }
         else{
-                cout << "Median of the Arrays: " << (vec3[vec3.size()/2] + vec3[vec3.size()/2 + 1])/2 << endl;
+                Median = (vec3[vec3.size()/2] + vec3[vec3.size()/2 + 1])/2;
         }
-        return vec3;
+
+        return Median;
 }
 
 int main(){
-        vector<int> a {1, 4, 6, 7, 8, 9, 10, 14, 49};
-        vector<int> b {2, 3, 5, 11, 23, 25, 27, 29, 34};
-        vector<int> c (a.size() + b.size() - 1, 0);
+        vector<int> a {};
+        vector<int> b {1, 4, 5, 6, 7, 8, 9, 10, 11, 14, 23, 25, 27, 29, 34};
+        double median;
 
-        ArrayMerger(a, b, c);
-        cout << "First Array: ";
-        for(int i = 0; i < a.size(); i++){
-                cout << a[i] << " ";
-        }
-        cout << endl;
-        cout << "Second Array: ";
-        for(int i = 0; i < b.size(); i++){
-                cout << b[i] << " ";
-        }
-        cout << endl;
-        cout << "Merged Array: ";
-        for(int i = 0; i < c.size(); i++){
-                cout << c[i] << " ";
-        }
-        cout << endl;
+        median = ArrayMergerAndMedianFinder(a, b, median);
+        cout << "Median of the Array: " << median << endl;
+
         return 0;
 }
-                                                                                                                                         
