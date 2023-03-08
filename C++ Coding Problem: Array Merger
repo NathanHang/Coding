@@ -3,29 +3,29 @@
 
 using namespace std;
 
-double ArrayMergerAndMedianFinder(vector<int> &vec1, vector<int> &vec2){
-        vector<int> vec3 (vec1.size() + vec2.size(), 0);
+double ArrayMergerAndMedianFinder(vector<int> & nums1, vector<int> & nums2){
+        vector<int> vec3 (nums1.size() + nums2.size(), 0);
         int ElementComparisonForVectorA = 0;
         int ElementComparisonForVectorB = 0;
         double Median = 0.0;
         for(int i = 0; i < vec3.size(); i++){
-                if(ElementComparisonForVectorA == vec1.size() || ElementComparisonForVectorB == vec2.size()){
-                        if(ElementComparisonForVectorA == vec1.size()){
-                                vec3[i] = vec2[ElementComparisonForVectorB];
+                if(ElementComparisonForVectorA == nums1.size() || ElementComparisonForVectorB == nums2.size()){
+                        if(ElementComparisonForVectorA == nums1.size()){
+                                vec3[i] = nums2[ElementComparisonForVectorB];
                                 ElementComparisonForVectorB += 1;
                         }
                         else{
-                                vec3[i] = vec1[ElementComparisonForVectorA];
+                                vec3[i] = nums1[ElementComparisonForVectorA];
                                 ElementComparisonForVectorA += 1;
                         }
                 }
                 else{
                         if(vec1[ElementComparisonForVectorA] < vec2[ElementComparisonForVectorB]){
-                                vec3[i] = vec1[ElementComparisonForVectorA];
+                                vec3[i] = nums1[ElementComparisonForVectorA];
                                 ElementComparisonForVectorA += 1;
                         }
                         else{
-                                vec3[i] = vec2[ElementComparisonForVectorB];
+                                vec3[i] = nums2[ElementComparisonForVectorB];
                                 ElementComparisonForVectorB += 1;
                         }
                 }
