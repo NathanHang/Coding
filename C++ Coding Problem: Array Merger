@@ -30,6 +30,13 @@ double ArrayMergerAndMedianFinder(vector<int> &vec1, vector<int> &vec2){
                         }
                 }
         }
+        
+        if(vec3.size() % 2 == 0){
+            Median = vec3[vec3.size()/2];
+        }
+        else{
+            Median = (vec3[vec3.size()/2] + vec3[vec3.size()/2 + 1])/2;
+        }
 
         return Median;
 }
