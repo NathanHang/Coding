@@ -7,6 +7,7 @@ double ArrayMergerAndMedianFinder(vector<int> &vec1, vector<int> &vec2){
         vector<int> vec3 (vec1.size() + vec2.size(), 0);
         int ElementComparisonForVectorA = 0;
         int ElementComparisonForVectorB = 0;
+        double Median = 0.0;
         for(int i = 0; i < vec3.size(); i++){
                 if(ElementComparisonForVectorA == vec1.size() || ElementComparisonForVectorB == vec2.size()){
                         if(ElementComparisonForVectorA == vec1.size()){
@@ -38,7 +39,7 @@ int main(){
         vector<int> b {1, 4, 5, 6, 7, 8, 9, 10, 11, 14, 23, 25, 27, 29, 34};
         double median;
 
-        median = ArrayMergerAndMedianFinder(a, b, median);
+        median = ArrayMergerAndMedianFinder(a, b);
         cout << "Median of the Array: " << median << endl;
 
         return 0;
