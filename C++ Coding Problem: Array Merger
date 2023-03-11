@@ -31,11 +31,11 @@ double ArrayMergerAndMedianFinder(vector<int> & nums1, vector<int> & nums2){
                 }
         }
         
-        if(vec3.size() % 2 == 0){
+        if(vec3.size() % 2 != 0){
             Median = vec3[vec3.size()/2];
         }
         else{
-            Median = (vec3[vec3.size()/2] + vec3[vec3.size()/2 + 1])/2.0;
+            Median = (vec3[vec3.size()/2] + vec3[vec3.size()/2 - 1])/2.0;
         }
 
         return Median;
