@@ -11,7 +11,7 @@ Public is when the information of a class is able to be accessed throughout the 
 Questions:
 -Does inheritance matter? No
 
-The method that is able to able private information of class through the means of public informaiton of that same class is called the setter/getter method
+The method that is able to able private information of class through the means of public information of that same class is called the setter/getter method
 */
 #include <iostream>
 
