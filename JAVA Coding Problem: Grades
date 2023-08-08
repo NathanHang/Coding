@@ -22,26 +22,26 @@ public class Main
 		        continue;
 		    }
 		    else if(grade >= 90){
-		        numberOfAs = numberOfAs + 1;
-		        numberOfStudents = numberOfStudents + 1;
+		        numberOfAs += 1;
+		        numberOfStudents += 1;
 		    }
 		    else if(grade >= 80){
-		        numberOfBs = numberOfBs + 1;
-		        numberOfStudents = numberOfStudents + 1;
+		        numberOfBs += 1;
+		        numberOfStudents += 1;
 		    }
 		    else if(grade >= 70){
-		        numberOfCs = numberOfCs + 1;
-		        numberOfStudents = numberOfStudents + 1;
+		        numberOfCs += 1;
+		        numberOfStudents += 1;
 		    }
 		    else if(grade >= 60){
-		        numberOfDs = numberOfDs + 1;
-		        numberOfStudents = numberOfStudents + 1;
+		        numberOfDs += 1;
+		        numberOfStudents += 1;
 		    }
 		    else{
-		        numberOfFs = numberOfFs + 1;
-		        numberOfStudents = numberOfStudents + 1;
+		        numberOfFs += 1;
+		        numberOfStudents += 1;
 		    }
-		    sumOfGrades = sumOfGrades + grade;
+		    sumOfGrades += grade;
 		    i++;
 		}
         System.out.println(averageOfGrades = sumOfGrades / numberOfStudents);
