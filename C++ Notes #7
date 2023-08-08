@@ -3,7 +3,7 @@
 /*
 Things to note:
 -Values in a class are always private, unless specified to be public like in the code.
--The statement: Rectangle(int width, int height) : width(width), height(height), is a constructor
+-The statement: Rectangle(int width, int height) : width(width), height(height), is a constructor.
 -A constructor always will exist when creating a class.
 */
 #include <iostream>
