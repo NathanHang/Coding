@@ -1,0 +1,66 @@
+#include <iostream>
+#include <cstdlib.h>
+
+int main()
+{
+    char userChoice, userSwitch, jackpot;
+    int randomNumber;
+    
+    randomNumber = rand(1,3);
+    
+    if(randomNumber == 1){
+        jackpot = 'A';
+    }
+    else if(randomNumber == 2){
+        jackpot = 'B';
+    }
+    else{
+        jackpot = 'C';
+    }
+    
+    cout << "Welcome! There are 3 doors, A, B, and C, in which one has a prize and the others have nothing. Choose a door(specifically input uppercase A B C): " endl;
+    cout << "[A] [B] [C]" << endl;
+    
+    cin >> userChoice;
+    
+    while(true){
+        if(userChoice == A || userChoice == B || userChoice == C){
+            break;
+        }
+        else{
+            cout << "Invalid Input, Try Again: " << endl;
+            cin >> userChoice;
+        }
+    }
+    
+    cout << "Alright! Let's reveal one of the empty doors: " << endl;
+    
+    if(jackpot == userChoice){
+        cout << 
+    }
+    else{
+        cout << 
+    }
+    
+    cout << "Now, would you like to switch doors? (Input Y for Yes/N for No): ";
+    cin >> userSwitch;
+    
+    while(true){
+        if(userSwitch == Y || userSwitch == N){
+            continue;
+        }
+        else{
+            cout << "Invalid Input, Try Again: " << endl;
+            cin >> userSwitch;
+        }
+    }
+    
+    if(userSwitch == Y){
+        
+    }
+    else{
+        
+    }
+
+    return 0;
+}
