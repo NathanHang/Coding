@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+struct node{
+    int data;
+    node* next;
+};
+
+node* head = nullptr;
+node* tail = nullptr;
+
+int size = 0;
+
+void add_end(int num){
+    node* allocator = new node();
+    allocator->data = num;
+    if(head == nullptr){
+        head = tail = allocator;
+        tail-> next = nullptr;
+    }
+    tail->next = allocator;
+    tail = allocator;
+    tail->next = nullptr;
+    size++;
+    
+}
+
+int main()
+{
+    /*
+    node* new_node = new node;
+    new_node->data = 0;
+    new_node->next = nullptr;
+    head = tail = new_node;
+    */
+    
+    add_end(1);
+    add_end(5);
+    add_end(4);
+    add_end(19);
+    add_end(12321321);
+    
+    
+    node* cursor = head;
+    while(cursor){
+        cout << cursor->data << " ";
+        cursor = cursor->next;
+    }
+    
+    cout << endl;
+    cout << "Size of Linked List: " << size;
+    
+    return 0;
+}
