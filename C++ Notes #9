@@ -3,17 +3,17 @@
 
 using namespace std;
 
-struct node{//C
+struct node{ //Creates the nodes for the linked list.
     int data;
     node* next;
 };
 
-node* head = nullptr;
-node* tail = nullptr;
+node* head = nullptr;//Declares the "head" or beginning of the linked list.
+node* tail = nullptr;//Declares the "tail" or end of the linked list.
 
 int size = 0;
 
-void add_end(int num){
+void add_end(int num){ //Function that adds elements to this dynamic data structure.
     node* allocator = new node();
     allocator->data = num;
     allocator->next = nullptr;
@@ -44,7 +44,7 @@ int main()
     
     
     node* cursor = head;
-    while(cursor){
+    while(cursor){ //Loop that loops through the linked list and prints it out.
         cout << cursor->data << " ";
         cursor = cursor->next;
     }
