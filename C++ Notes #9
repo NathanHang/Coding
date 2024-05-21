@@ -1,8 +1,9 @@
+//Linked Lists
 #include <iostream>
 
 using namespace std;
 
-struct node{
+struct node{//C
     int data;
     node* next;
 };
@@ -15,20 +16,20 @@ int size = 0;
 void add_end(int num){
     node* allocator = new node();
     allocator->data = num;
-    if(head == nullptr){
-        head = tail = allocator;
-        tail-> next = nullptr;
+    allocator->next = nullptr;
+    if(head == nullptr){//necessary if the linked list is purely a nullptr
+        head = allocator;
     }
-    tail->next = allocator;
-    tail = allocator;
-    tail->next = nullptr;
+    else{
+        tail->next = allocator;
+    }
+    tail = allocator;//The new tail is assigned
     size++;
-    
 }
 
 int main()
 {
-    /*
+    /* To create an existing linked list
     node* new_node = new node;
     new_node->data = 0;
     new_node->next = nullptr;
