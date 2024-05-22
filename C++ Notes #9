@@ -1,29 +1,41 @@
-//Linked List.
 #include <iostream>
 
 using namespace std;
 
-struct node{ //Creates the nodes for the linked list.
+struct node{
     int data;
     node* next;
 };
 
-node* head = nullptr;//Declares the "head" or beginning of the linked list.
-node* tail = nullptr;//Declares the "tail" or end of the linked list.
+node* head = nullptr;
+node* tail = nullptr;
 
 int size = 0;
 
-void add_end(int num){ //Function that adds elements to this dynamic data structure.
+void add_start(int val){
+    node* allocator = new node();
+    allocator->data = val;
+    if(head == nullptr){
+        head = allocator;
+    }
+    else{
+        allocator->next = head;
+    }
+    head = allocator;
+    size++;
+}
+
+void add_end(int num){ 
     node* allocator = new node();
     allocator->data = num;
     allocator->next = nullptr;
-    if(head == nullptr){//necessary if the linked list is purely a nullptr
+    if(head == nullptr){
         head = allocator;
     }
     else{
         tail->next = allocator;
     }
-    tail = allocator;//The new tail is assigned
+    tail = allocator;
     size++;
 }
 
@@ -41,10 +53,13 @@ int main()
     add_end(4);
     add_end(19);
     add_end(12321321);
+    add_start(483);
+    add_start(34242);
+    add_start(223);
     
     
     node* cursor = head;
-    while(cursor){ //Loop that loops through the linked list and prints it out.
+    while(cursor){
         cout << cursor->data << " ";
         cursor = cursor->next;
     }
