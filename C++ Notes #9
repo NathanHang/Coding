@@ -16,7 +16,7 @@ void add_start(int val){
     node* allocator = new node();
     allocator->data = val;
     if(head == nullptr){
-        head = allocator;
+        head = tail = allocator;
     }
     else{
         allocator->next = head;
@@ -39,6 +39,14 @@ void add_end(int num){
     size++;
 }
 
+bool is_empty(node* check){
+    return (head == nullptr);
+}
+
+int get_start(){
+    return head->data;
+}
+
 int main()
 {
     /* To create an existing linked list
@@ -46,7 +54,6 @@ int main()
     new_node->data = 0;
     new_node->next = nullptr;
     head = tail = new_node;
-    */
     
     add_end(1);
     add_end(5);
@@ -56,16 +63,33 @@ int main()
     add_start(483);
     add_start(34242);
     add_start(223);
+    */
     
-    
-    node* cursor = head;
-    while(cursor){
-        cout << cursor->data << " ";
-        cursor = cursor->next;
-    }
+    add_end(6);
+    add_start(8);
+    add_end(5);
+    add_start(9);
+    add_end(2);
+    add_start(3);
+    add_end(10);
+    add_start(11);
+    add_end(1);
+    add_start(4);
     
     cout << endl;
-    cout << "Size of Linked List: " << size;
+    cout << "Size of Linked List: " << size << endl;
+    cout << "Here is the list: " << endl;
+
+    node* cursor = head;
+
+    while(cursor){
+        cout << cursor->data <<" ";
+        cursor = cursor->next;
+    }
+
+    cout << "\nSize: " << size << endl << "Head: " << head->data << endl << "Tail: " << tail->data << endl;
+    
+    cout << get_start();
     
     return 0;
 }
