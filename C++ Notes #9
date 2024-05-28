@@ -5,6 +5,7 @@ using namespace std;
 struct node{
     int data;
     node* next;
+    node* previous;
 };
 
 node* head = nullptr;
@@ -20,6 +21,7 @@ void add_start(int val){
     }
     else{
         allocator->next = head;
+        head->previous = allocator;
     }
     head = allocator;
     size++;
@@ -39,30 +41,35 @@ void add_end(int num){
     size++;
 }
 
-bool is_empty(node* check){
-    return (head == nullptr);
+bool is_Empty(){
+    return(head == nullptr);
 }
 
 int get_start(){
     return head->data;
 }
 
+int get_end(){
+    return tail->data;
+}
+
+bool check(int input){
+    for(node* i = head; i != nullptr; i=i->next){
+        if(i->data == input){
+            return true;
+        }
+    }
+    return false;
+} 
+
 int main()
 {
+    int checker = 0;
     /* To create an existing linked list
     node* new_node = new node;
     new_node->data = 0;
     new_node->next = nullptr;
     head = tail = new_node;
-    
-    add_end(1);
-    add_end(5);
-    add_end(4);
-    add_end(19);
-    add_end(12321321);
-    add_start(483);
-    add_start(34242);
-    add_start(223);
     */
     
     add_end(6);
@@ -76,10 +83,7 @@ int main()
     add_end(1);
     add_start(4);
     
-    cout << endl;
-    cout << "Size of Linked List: " << size << endl;
     cout << "Here is the list: " << endl;
-
     node* cursor = head;
 
     while(cursor){
@@ -89,7 +93,37 @@ int main()
 
     cout << "\nSize: " << size << endl << "Head: " << head->data << endl << "Tail: " << tail->data << endl;
     
-    cout << get_start();
+    cursor = tail;
+    
+    cout << "Reversed List:" << endl;
+    
+    while(cursor){
+        cursor = cursor->previous;
+        cout << cursor->data << " ";
+    }
+    
+    /*
+    cout << "Is the list empty?" << endl;
+    if(is_Empty()){
+        cout << "true" << endl;
+    }
+    else{
+        cout << "false" << endl;
+    }
+    cout << "The beginning of the list:" << endl;
+    cout << get_start() << endl;
+    cout << "The end of the list:" << endl;
+    cout << get_end() << endl;
+    cout << "Check value if it exists: " << endl;
+    cin >> checker;
+    if(check(checker)){
+        cout << "true" << endl;
+    }
+    else{
+        cout << "false" << endl;
+    }
+    */
+    
     
     return 0;
 }
