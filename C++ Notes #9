@@ -1,3 +1,4 @@
+//Linked List in C++.
 #include <iostream>
 
 using namespace std;
@@ -36,9 +37,26 @@ void add_end(int num){
     }
     else{
         tail->next = allocator;
+        allocator->previous = tail;
     }
     tail = allocator;
     size++;
+}
+
+void remove_head(){
+    node* temp;
+    temp = head;
+    head = head->next;
+    delete temp;
+    head->previous = nullptr;
+}
+
+void remove_end(){
+    node* temp;
+    temp = tail;
+    tail = tail->previous;
+    delete temp;
+    tail->next = nullptr;
 }
 
 bool is_Empty(){
@@ -72,16 +90,9 @@ int main()
     head = tail = new_node;
     */
     
-    add_end(6);
-    add_start(8);
-    add_end(5);
-    add_start(9);
-    add_end(2);
-    add_start(3);
-    add_end(10);
-    add_start(11);
-    add_end(1);
-    add_start(4);
+    add_start(5);
+    add_end(3);
+    add_start(2);
     
     cout << "Here is the list: " << endl;
     node* cursor = head;
@@ -98,8 +109,15 @@ int main()
     cout << "Reversed List:" << endl;
     
     while(cursor){
-        cursor = cursor->previous;
         cout << cursor->data << " ";
+        cursor = cursor->previous;
+    }
+    
+    remove_head();
+    
+    while(cursor){
+        cout << cursor->data <<" ";
+        cursor = cursor->next;
     }
     
     /*
