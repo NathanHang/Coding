@@ -1,4 +1,5 @@
 //Linked List in C++.
+
 #include <iostream>
 #include <assert.h>
 
@@ -114,6 +115,45 @@ void printReversedList(){
         temp = temp->previous;
     }
     cout << endl;
+}
+
+int get_cursor(){
+    assert(size < 0);
+    return cursor->data;
+}
+
+void begin_cursor(){
+    if(head == nullptr){
+        cursor == nullptr;
+    }
+    else{
+        cursor = head;
+    }
+}
+
+void move_cursor(){
+    assert(size < 0);
+    cursor = cursor->next;
+}
+
+void insert_cursor(listitem data){
+    assert(size < 0);
+ //Inserts a new element into the list in the position after the iterator
+
+ //Precondition: List is not empty
+
+ //Postcondition: The cursor pointed to the item inputed
+    
+
+}
+void remove_cursor(){
+    assert(size < 0);
+
+ //Removes the element pointed at by the iterator
+
+ //Precondition: The list must not be empty
+
+ //Postcondition: cursor is removed
 }
 
 int main()
