@@ -1,5 +1,6 @@
 //Linked List in C++.
 #include <iostream>
+#include <assert.h>
 
 using namespace std;
 
@@ -11,6 +12,7 @@ struct node{
 
 node* head = nullptr;
 node* tail = nullptr;
+node* cursor;
 
 int size = 0;
 
@@ -43,20 +45,34 @@ void add_end(int num){
     size++;
 }
 
-void remove_head(){
-    node* temp;
-    temp = head;
-    head = head->next;
-    delete temp;
-    head->previous = nullptr;
+void remove_start(){
+    assert(size != 0);
+    if(size == 1){
+        delete head;
+        head = tail = nullptr;
+    }
+    else{
+        node* temp = head;
+        head = head->next;
+        delete temp;
+        head->previous = nullptr;
+    }
+    size--;
 }
 
 void remove_end(){
-    node* temp;
-    temp = tail;
-    tail = tail->previous;
-    delete temp;
-    tail->next = nullptr;
+    assert(size != 0);
+    if(size == 1){
+        delete head;
+        head = tail = nullptr;
+    }
+    else{
+        node* temp = tail;
+        tail = tail->previous;
+        delete temp;
+        tail->next = nullptr;
+    }
+    size--;
 }
 
 bool is_Empty(){
@@ -78,7 +94,27 @@ bool check(int input){
         }
     }
     return false;
-} 
+}
+
+void printList(){
+    node* temp = head;
+    cout << "Here is the Linked List:" << endl;
+    while(temp){
+        cout << temp->data <<" ";
+        temp = temp->next;
+    }
+    cout << endl;
+}
+
+void printReversedList(){
+    node* temp = tail;
+    cout << "Reversed List:" << endl;
+    while(temp){
+        cout << temp->data << " ";
+        temp = temp->previous;
+    }
+    cout << endl;
+}
 
 int main()
 {
@@ -90,57 +126,26 @@ int main()
     head = tail = new_node;
     */
     
-    add_start(5);
-    add_end(3);
-    add_start(2);
-    
-    cout << "Here is the list: " << endl;
-    node* cursor = head;
-
-    while(cursor){
-        cout << cursor->data <<" ";
-        cursor = cursor->next;
-    }
+    printList();
 
     cout << "\nSize: " << size << endl << "Head: " << head->data << endl << "Tail: " << tail->data << endl;
     
-    cursor = tail;
+    printReversedList();
     
-    cout << "Reversed List:" << endl;
+    remove_start();
     
-    while(cursor){
-        cout << cursor->data << " ";
-        cursor = cursor->previous;
-    }
+    cout << endl;
     
-    remove_head();
+    cout << "Modified Size: " << size << endl;
     
-    while(cursor){
-        cout << cursor->data <<" ";
-        cursor = cursor->next;
-    }
-    
-    /*
-    cout << "Is the list empty?" << endl;
-    if(is_Empty()){
-        cout << "true" << endl;
+    if(head == tail && head == nullptr){
+        cout << "List is Empty" << endl;
     }
     else{
-        cout << "false" << endl;
+        cout << "List is not Empty" << endl;
     }
-    cout << "The beginning of the list:" << endl;
-    cout << get_start() << endl;
-    cout << "The end of the list:" << endl;
-    cout << get_end() << endl;
-    cout << "Check value if it exists: " << endl;
-    cin >> checker;
-    if(check(checker)){
-        cout << "true" << endl;
-    }
-    else{
-        cout << "false" << endl;
-    }
-    */
+    
+    printList();
     
     
     return 0;
