@@ -1,14 +1,33 @@
-//Linked List in C++.
-
+//Linked List as a header file. INCOMPLETE AND INCORRECT
+#ifndef LIST_H
+#define LIST_H
 #include <iostream>
 #include <assert.h>
 
-using namespace std;
-
-struct node{
-    int data;
-    node* next;
-    node* previous;
+class linkedList{
+    private:
+    struct node{
+        int data;
+        node* next;
+        node* previous;
+    };
+    public:
+    void add_start();
+    void add_end();
+    void remove_start();
+    void remove_end();
+    bool is_Empty();
+    int get_start();
+    int get_end();
+    bool check();
+    void printList();
+    void printReversedList();
+    int get_cursor();
+    void begin_cursor();
+    void move_cursor();
+    void insert_cursor();
+    void remove_cursor();
+    
 };
 
 node* head = nullptr;
@@ -17,7 +36,7 @@ node* cursor;
 
 int size = 0;
 
-void add_start(int val){
+void linkedList::add_start(int val){
     node* allocator = new node();
     allocator->data = val;
     if(head == nullptr){
@@ -31,7 +50,7 @@ void add_start(int val){
     size++;
 }
 
-void add_end(int num){ 
+void linkedList::add_end(int num){ 
     node* allocator = new node();
     allocator->data = num;
     allocator->next = nullptr;
@@ -46,7 +65,7 @@ void add_end(int num){
     size++;
 }
 
-void remove_start(){
+void linkedList::remove_start(){
     assert(size != 0);
     if(size == 1){
         delete head;
@@ -61,7 +80,7 @@ void remove_start(){
     size--;
 }
 
-void remove_end(){
+void linkedList::remove_end(){
     assert(size != 0);
     if(size == 1){
         delete head;
@@ -76,19 +95,19 @@ void remove_end(){
     size--;
 }
 
-bool is_Empty(){
+bool linkedList::is_Empty(){
     return(head == nullptr);
 }
 
-int get_start(){
+int linkedList::get_start(){
     return head->data;
 }
 
-int get_end(){
+int linkedList::get_end(){
     return tail->data;
 }
 
-bool check(int input){
+bool linkedList::check(int input){
     for(node* i = head; i != nullptr; i=i->next){
         if(i->data == input){
             return true;
@@ -97,7 +116,7 @@ bool check(int input){
     return false;
 }
 
-void printList(){
+void linkedList::printList(){
     node* temp = head;
     cout << "Here is the Linked List:" << endl;
     while(temp){
@@ -107,7 +126,7 @@ void printList(){
     cout << endl;
 }
 
-void printReversedList(){
+void linkedList::printReversedList(){
     node* temp = tail;
     cout << "Reversed List:" << endl;
     while(temp){
@@ -117,12 +136,12 @@ void printReversedList(){
     cout << endl;
 }
 
-int get_cursor(){
-    assert(size < 0);
+int linkedList::get_cursor(){
+    assert(size > 0);
     return cursor->data;
 }
 
-void begin_cursor(){
+void linkedList::begin_cursor(){
     if(head == nullptr){
         cursor == nullptr;
     }
@@ -131,62 +150,31 @@ void begin_cursor(){
     }
 }
 
-void move_cursor(){
-    assert(size < 0);
+void linkedList::move_cursor(){
+    assert(size > 0);
     cursor = cursor->next;
 }
 
-void insert_cursor(listitem data){
-    assert(size < 0);
- //Inserts a new element into the list in the position after the iterator
-
- //Precondition: List is not empty
-
- //Postcondition: The cursor pointed to the item inputed
-    
-
-}
-void remove_cursor(){
-    assert(size < 0);
-
- //Removes the element pointed at by the iterator
-
- //Precondition: The list must not be empty
-
- //Postcondition: cursor is removed
+void linkedList::insert_cursor(int saidInput){
+    assert(size > 0);
+    if(cursor == tail){
+        add_end(saidInput);
+    }
+    node* allocator = new node();
+    allocator->data = saidInput;
+    allocator->previous = cursor;
+    allocator->next = cursor->next;
+    cursor->next->previous = allocator;
+    cursor->next = allocator;
+    cursor = cursor->next;
 }
 
-int main()
-{
-    int checker = 0;
-    /* To create an existing linked list
-    node* new_node = new node;
-    new_node->data = 0;
-    new_node->next = nullptr;
-    head = tail = new_node;
-    */
-    
-    printList();
-
-    cout << "\nSize: " << size << endl << "Head: " << head->data << endl << "Tail: " << tail->data << endl;
-    
-    printReversedList();
-    
-    remove_start();
-    
-    cout << endl;
-    
-    cout << "Modified Size: " << size << endl;
-    
-    if(head == tail && head == nullptr){
-        cout << "List is Empty" << endl;
-    }
-    else{
-        cout << "List is not Empty" << endl;
-    }
-    
-    printList();
-    
-    
-    return 0;
+void linkedList::remove_cursor(){
+    assert(size > 0);
+    node* temp;
+    cursor->previous->next = cursor->next;
+    cursor->next->previous = cursor->previous;
+    temp = cursor;
+    cursor = cursor->next;
+    delete temp;
 }
