@@ -66,7 +66,7 @@ void linkedList::add_end(int num){
 }
 
 void linkedList::remove_start(){
-    assert(size != 0);
+    assert(size > 0);
     if(size == 1){
         delete head;
         head = tail = nullptr;
@@ -81,7 +81,7 @@ void linkedList::remove_start(){
 }
 
 void linkedList::remove_end(){
-    assert(size != 0);
+    assert(size > 0);
     if(size == 1){
         delete head;
         head = tail = nullptr;
