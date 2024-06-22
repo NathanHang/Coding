@@ -1,5 +1,4 @@
-//Linked List as a header file. INCOMPLETE AND INCORRECT
-#ifndef LIST_H
+//Linked List.
 #define LIST_H
 #include <iostream>
 #include <assert.h>
@@ -11,28 +10,27 @@ class linkedList{
         node* next;
         node* previous;
     };
+    node* head = nullptr;
+    node* tail = nullptr;
+    node* cursor;
     public:
-    void add_start();
-    void add_end();
+    void add_start(int val);
+    void add_end(int num);
     void remove_start();
     void remove_end();
     bool is_Empty();
     int get_start();
     int get_end();
-    bool check();
+    bool check(int input);
     void printList();
     void printReversedList();
     int get_cursor();
     void begin_cursor();
     void move_cursor();
-    void insert_cursor();
+    void insert_cursor(int saidInput);
     void remove_cursor();
     
 };
-
-node* head = nullptr;
-node* tail = nullptr;
-node* cursor;
 
 int size = 0;
 
