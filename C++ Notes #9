@@ -1,4 +1,4 @@
-//Linked List
+//Linked List.
 #define LIST_H
 #include <iostream>
 #include <assert.h>
