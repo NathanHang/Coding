@@ -1,0 +1,13 @@
+/*
+For this project, you will create and implement two methods:
+1. The first method will be called createDog() which will return a Dog object. It will also have no parameters. This method will simply create aa new Dog object that will have the following attributes
+-age = 2
+-breed = Boston Terrier
+-name = Lucy
+2. The second method will be called pythagoreanTheorem() while will return an int. It will have two int parameters a and b. This method will compute the Pythagorean theorem given a and b. Recall that the formula for computing the missing side is: c = sqrt(a^2 + b^2). In this case, you will be returning and calculating c. Example: pythagoreanTheorem(3, 4) -> 5
+
+Hints:
+1. There are two constructors in the Dog class. Which one do we call if we want to have our own custom name, age, and breed?
+2. You might need to use a combination of Math.sqrt() and Math.pow() for the Pythagorean Theroem.
+3. Make sure to explicitly cast your result in pythagoreanTheorem() to an int since math.sqrt() returns a double.
+*/
