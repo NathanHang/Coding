@@ -11,3 +11,32 @@ Hints:
 2. You might need to use a combination of Math.sqrt() and Math.pow() for the Pythagorean Theroem.
 3. Make sure to explicitly cast your result in pythagoreanTheorem() to an int since math.sqrt() returns a double.
 */
+import java.lang.Math.*;
+
+class createDog{
+    createDog(){
+        int age = 2;
+        String breed = "Boston Terrier", name = "Lucy";
+    }
+    createDog(int age, String breed, String name){
+        
+    }
+}
+
+public class Main
+{
+  public static int pythagoreanTheorem(int a, int b){
+      if(a <= 0 || b <= 0){
+          System.out.println("Invalid input detected.");
+          return 0;
+      }
+      double trueResult = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+      System.out.print("The hypotenuse is: ");
+      return (int)trueResult;
+  }
+  public static void main(String[] args) {
+		createDog Dog = new createDog();
+		int result = pythagoreanTheorem(3,4);
+		System.out.print(result);
+	}
+}
