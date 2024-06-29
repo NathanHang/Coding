@@ -7,34 +7,32 @@ using namespace std;
 
 class linkedList{
     private:
-    struct node{
-        int data;
-        node* next;
-        node* previous;
-    };
-    node* head = nullptr;
-    node* tail = nullptr;
-    node* cursor;
+        struct node{
+            int data;
+            node* next;
+            node* previous;
+        };
+        node* head = nullptr;
+        node* tail = nullptr;
+        node* cursor;
+        int size = 0;
     public:
-    void add_start(int val);
-    void add_end(int num);
-    void remove_start();
-    void remove_end();
-    bool is_Empty();
-    int get_start();
-    int get_end();
-    bool check(int input);
-    void printList();
-    void printReversedList();
-    int get_cursor();
-    void begin_cursor();
-    void move_cursor();
-    void insert_cursor(int saidInput);
-    void remove_cursor();
-    
+        void add_start(int val);
+        void add_end(int num);
+        void remove_start();
+        void remove_end();
+        bool is_Empty();
+        int get_start();
+        int get_end();
+        bool check(int input);
+        void printList();
+        void printReversedList();
+        int get_cursor();
+        void begin_cursor();
+        void move_cursor();
+        void insert_cursor(int saidInput);
+        void remove_cursor();
 };
-
-int size = 0;
 
 void linkedList::add_start(int val){
     node* allocator = new node();
