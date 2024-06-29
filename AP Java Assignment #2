@@ -26,9 +26,54 @@ Hints:
 It might be best to take an approach of using nested if-else statements
 Make sure you match the output exactly since any extra space or letter can cause your code to not pass the tests
 */
+import java.util.*;
 
-public static Main{
-    public static void main(String args[]){
-        System.out.println("Hello World");
+class Unit3{
+    public String divisibleBy(int num){
+        //Hint Method; Optimal Syntax; More bracket syntax
+        if(num == 0){
+            return " is neither positive or negative";
+        }
+        else if(num % 2 == 0){
+            if(num > 0){
+                return " is an even number and positive";
+            }
+            else{
+                return " is an even number and negative";
+            }
+        }
+        else{
+            if(num > 0){
+                return " is an odd number and positive";
+            }
+            else{
+                return " is an odd number and negative";
+            }
+        }
+        /*
+        Brute Method; Have to write more syntax; Less bracket syntax
+        else if(num % 2 == 0 && num > 0){
+            return " is an even number and positive";
+        }
+        else if(num % 2 != 0 && num > 0){
+            return " is an odd number and positive";
+        }
+        else if(num % 2 == 0 && num < 0){
+            return " is an even number and negative";
+        }
+        else{
+            return " is an odd number and negative";
+        }
+        */
     }
+}
+
+public class Main
+{
+	public static void main(String[] args){
+	    Scanner s = new Scanner(System.in);
+	    int input = s.nextInt();
+		Unit3 unit = new Unit3();
+		System.out.println(input + unit.divisibleBy(input));
+	}
 }
