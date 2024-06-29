@@ -1,0 +1,37 @@
+/*
+Unit 3: Coding Project
+
+You will implement a method called divisibleBy() that will return a String. It will also take an int as a parameter. Based on the parameter num, the method will have 4 different outputs:
+
+If num is an even number and positive, the method will return "num is an even number and positive"
+If num is an odd number and positive, the method will return "num is an odd number and positive"
+If num is an even number and negative, the method will return "num is an even number and negative"
+If num is an odd number and negative, the method will return "num is an odd number and negative"
+If num is 0, the method will return "numis neither positive or negative"
+Example:
+
+divisiblyBy(2)
+
+2 is an even number and positive
+
+divisibleBy(-5)
+
+-5 is an odd number and negative
+
+divisibleBy(0)
+
+0 is neither positive or negative
+
+Your code will run against tests to see if it is correct. Once all tests pass, then you have successfully completed this project!
+
+Hints:
+
+It might be best to take an approach of using nested if-else statements
+Make sure you match the output exactly since any extra space or letter can cause your code to not pass the tests
+*/
+
+public static Main{
+    public static void main(String args[]){
+        System.out.println("Hello World");
+    }
+}
