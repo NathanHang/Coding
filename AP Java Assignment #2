@@ -11,15 +11,12 @@ If num is 0, the method will return "numis neither positive or negative"
 Example:
 
 divisiblyBy(2)
-
 2 is an even number and positive
 
 divisibleBy(-5)
-
 -5 is an odd number and negative
 
 divisibleBy(0)
-
 0 is neither positive or negative
 
 Your code will run against tests to see if it is correct. Once all tests pass, then you have successfully completed this project!
