@@ -32,11 +32,11 @@ class Unit3{
     public String divisibleBy(int num){
         //Hint Method; Optimal Syntax; More bracket syntax
         if(num == 0){
-            return " is neither positive or negative";
+		return " is neither positive or negative";
         }
         else if(num % 2 == 0){
             if(num > 0){
-                return " is an even number and positive";
+        	return " is an even number and positive";
             }
             else{
                 return " is an even number and negative";
@@ -53,16 +53,16 @@ class Unit3{
         /*
         Brute Method; Have to write more syntax; Less bracket syntax
         else if(num % 2 == 0 && num > 0){
-            return " is an even number and positive";
+        	return " is an even number and positive";
         }
         else if(num % 2 != 0 && num > 0){
-            return " is an odd number and positive";
+        	return " is an odd number and positive";
         }
         else if(num % 2 == 0 && num < 0){
-            return " is an even number and negative";
+        	return " is an even number and negative";
         }
         else{
-            return " is an odd number and negative";
+        	return " is an odd number and negative";
         }
         */
     }
@@ -71,8 +71,8 @@ class Unit3{
 public class Main
 {
 	public static void main(String[] args){
-	    Scanner s = new Scanner(System.in);
-	    int input = s.nextInt();
+		Scanner s = new Scanner(System.in);
+		int input = s.nextInt();
 		Unit3 unit = new Unit3();
 		System.out.println(input + unit.divisibleBy(input));
 	}
