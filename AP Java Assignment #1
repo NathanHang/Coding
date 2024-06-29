@@ -13,30 +13,37 @@ Hints:
 */
 import java.lang.Math.*;
 
-class createDog{
-    createDog(){
-        int age = 2;
-        String breed = "Boston Terrier", name = "Lucy";
+class Dog{
+    int age;
+    String breed, name;
+    public Dog(){
+        int age = 0;
+        String breed = "N/A", name = "N/A";
     }
-    createDog(int age, String breed, String name){
-        
+    public Dog(int inputtedAge, String inputtedBreed, String inputtedName){
+        age = inputtedAge;
+        breed = inputtedBreed;
+        name = inputtedName;
+    }
+}
+
+class Unit2{
+    public Dog createDog(){
+        Dog d = new Dog(2, "Boston Terrier", "Lucy");
+        return d;
+    }
+    public int pythagoreanTheorem(int a, int b){
+        double trueResult = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+        return (int)trueResult;
     }
 }
 
 public class Main
 {
-  public static int pythagoreanTheorem(int a, int b){
-      if(a <= 0 || b <= 0){
-          System.out.println("Invalid input detected.");
-          return 0;
-      }
-      double trueResult = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
-      System.out.print("The hypotenuse is: ");
-      return (int)trueResult;
-  }
-  public static void main(String[] args) {
-		createDog Dog = new createDog();
-		int result = pythagoreanTheorem(3,4);
-		System.out.print(result);
+    public static void main(String[] args) {
+		Unit2 unit = new Unit2();
+		unit.createDog();
+		int result = unit.pythagoreanTheorem(3,4);
+		System.out.println("The hypotenuse is: " + result);
 	}
 }
