@@ -51,7 +51,7 @@ class Unit3{
             }
         }
         /*
-        Brute Method; Have to write more syntax; Less bracket syntax
+        Brute Method; More syntax; Less bracket syntax
         else if(num % 2 == 0 && num > 0){
         	return " is an even number and positive";
         }
