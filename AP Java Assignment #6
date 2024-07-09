@@ -14,17 +14,39 @@ Hints:
 You will need to loop through the rows and columns of the 2D array. You can implement this using either row-major or column-major order.
 The arrays can be different sizes, even empty.
 *******************************************************************************/
-import java.util.ArrayList;
+import java.io.*;
 
 class Unit8 {
     public void mult2D(int[][] arr) {
-        
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                arr[i][j] *= 3;
+            }
+        }
+        System.out.println("New Array:");
+        for(int i = 0; i < arr.length; i++){
+            System.out.print("{");
+            for(int j = 0; j < arr[0].length; j++){
+                System.out.print(arr[i][j]);
+                if(j != arr[0].length-1){
+                    System.out.print(",");
+                }
+            }
+            if(i != arr.length-1){
+                System.out.print("},");
+            }
+            else{
+                System.out.print("}");
+            }
+        }
     }
 }
 
 public class Main
 {
 	public static void main(String[] args) {
-		Unit7 unit = new Unit7();
+	    int[][] array = { {4,6,3}, {1,9,8}, {0,5,7}, {11,13,12} };
+		Unit8 unit = new Unit8();
+		unit.mult2D(array);
 	}
 }
