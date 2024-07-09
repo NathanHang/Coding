@@ -23,6 +23,8 @@ When you perform the swap, make sure you save one of the elements into a tempora
 import java.util.ArrayList;
 
 class Unit7 {
+    int counter = 0;
+    
     public void insertionSort(ArrayList<Integer> list){
         int temp;
         for(int i = 1; i < list.size(); i++){
@@ -31,6 +33,7 @@ class Unit7 {
                     temp = list.get(j);
                     list.set(j,list.get(j-1));
                     list.set(j-1,temp);
+                    counter += 1;
                 }
                 else{
                     break;
@@ -38,6 +41,7 @@ class Unit7 {
             }
         }
         System.out.println(list);
+        System.out.println("Iterations: " + counter);
     }
     public void selectionSort(ArrayList<Integer> list){
         int min;
@@ -53,10 +57,12 @@ class Unit7 {
                 temp = list.get(min);
                 list.set(min,list.get(i));
                 list.set(i,temp);
+                counter += 1;
             }
             
         }
         System.out.println(list);
+        System.out.println("Iterations: " + counter);
     }
 }
 
