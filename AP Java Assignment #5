@@ -1,0 +1,76 @@
+/******************************************************************************
+Unit 7: Coding Project
+
+For this exercise, you will implement the Selection Sort algorithm by completing the method selectionSort(ArrayList<Integer> list) below. This method takes an ArrayList of integers that you will sort using the Selection Sort algorithm. You don't need to return anything for this method since when you manipulate the ArrayList, you are changing the ArrayList itself.
+
+Example:
+
+ArrayList<Integer> list = new ArrayList<Integer>(); // {3, 9, 0, 6}
+list.add(3);
+list.add(9);
+list.add(0);
+list.add(6);
+insertionSort(list);
+ 
+{0, 3, 6, 9}
+
+Your code will run against tests to see if it is correct. Once all tests pass, then you have successfully completed this project!
+
+Hints:
+Selection Sort requires that you find the minimum element in the unsorted part of the array so you may need a nested for loop to accomplish this.
+When you perform the swap, make sure you save one of the elements into a temporary variable, or else you'll lose its value.
+*******************************************************************************/
+import java.util.ArrayList;
+
+class Unit7 {
+    public void insertionSort(ArrayList<Integer> list){
+        int temp;
+        for(int i = 1; i < list.size(); i++){
+            for(int j = i; j > 0; j--){
+                if(list.get(j-1) > list.get(j)){
+                    temp = list.get(j);
+                    list.set(j,list.get(j-1));
+                    list.set(j-1,temp);
+                }
+                else{
+                    break;
+                }
+            }
+        }
+        System.out.println(list);
+    }
+    public void selectionSort(ArrayList<Integer> list){
+        int min;
+        int temp;
+        for(int i = 0; i < list.size() - 1; i++){
+            min = i;
+            for(int j = i; j < list.size(); j++){
+                if(list.get(min) > list.get(j)){
+                    min = j;
+                }
+            }
+            if(i != min){
+                temp = list.get(min);
+                list.set(min,list.get(i));
+                list.set(i,temp);
+            }
+            
+        }
+        System.out.println(list);
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    ArrayList<Integer> array = new ArrayList<Integer>();
+	    array.add(5);
+	    array.add(3);
+	    array.add(0);
+	    array.add(9);
+	    array.add(-2);
+		Unit7 unit = new Unit7();
+		//unit.insertionSort(array);
+		unit.selectionSort(array);
+	}
+}
