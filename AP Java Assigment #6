@@ -1,0 +1,30 @@
+/******************************************************************************
+Unit 8: Coding Project
+
+For this coding exercise, you will implement the method mult2D(int[][] arr) that traverses through the given 2D array and multiplies every value by 3. You don't need to return anything for this method since you are changing the array itself.
+
+Example:
+mult2D({ {1,4,8}, {5,2,3} })
+{ {3,12,24}, {15,6,9} }
+ 
+Your code will run against tests to see if it is correct. Once all tests pass, then you have successfully completed this project!
+
+Hints:
+
+You will need to loop through the rows and columns of the 2D array. You can implement this using either row-major or column-major order.
+The arrays can be different sizes, even empty.
+*******************************************************************************/
+import java.util.ArrayList;
+
+class Unit8 {
+    public void mult2D(int[][] arr) {
+        
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		Unit7 unit = new Unit7();
+	}
+}
