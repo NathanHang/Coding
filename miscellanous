@@ -1,30 +1,8 @@
-//Ay don't look at this code
+
 #include <iostream>
 #include <string>
 
 using namespace std;
-
-class brainrotIndividual{
-    private:
-    bool fatherlessness = true;
-    bool homelessness = true;
-    bool willToFindInnerPeace = false;
-    bool contagious = true;
-    bool lovingRelationships = false;
-    protected:
-    int WomenHaveConversedWith = 0;
-    double theAmountOfTesterone = -100.69;
-    string sexuality = "onlyForMySister";
-    bool understandingOfWhatItMeansToLive = false;
-    public:
-    int sigmaness = 10;
-    int skibiditoilet = 100;
-    bool tiktokRizzParty = true;
-    int aura = 1000;
-    bool isFatherless();
-    bool isHomeless();
-    bool willingToBePeaceful();
-};
 
 int main()
 {
