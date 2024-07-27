@@ -1,0 +1,83 @@
+import java.util.*;
+import java.lang.Math;
+import java.util.Random;
+
+class arrayCreator{
+    public arrayCreator(){
+        
+    }
+    public static void randomArray(){
+        
+    }
+    public static void almostSortedArray(){
+        
+    }
+}
+
+public class Main
+{
+    public static void bubbleSort(ArrayList<Integer> arr){
+        
+    }
+    public static void insertionSort(ArrayList<Integer> arr){
+        int temp, counter = 0;
+        for(int i = 0; i < arr.size(); i++){
+            for(int j = i; j > 0; j--){
+                if(arr.get(j-1) > arr.get(j)){
+                    temp = arr.get(j);
+                    arr.set(j, arr.get(j-1));
+                    arr.set(j-1, temp);
+                }
+                else{
+                    break;
+                }
+                counter++;
+            }
+        }
+    }
+    public static void selectionSort(ArrayList<Integer> arr){
+        int temp, min, counter = 0;
+        for(int i = 0; i < arr.size() - 1; i++){
+            min = i;
+            for(int j = i; j < arr.size(); j++){
+                if(arr.get(j) < arr.get(min)){
+                    min = j;
+                }
+            }
+            if(i != min){
+                temp = arr.get(i);
+                arr.set(i, arr.get(min));
+                arr.set(min, temp);
+                counter++;
+            }
+        }
+    }
+    public static void mergeSort(ArrayList<Integer> arr){
+        
+    }
+    public static void quickSort(ArrayList<Integer> arr){
+        
+    }
+    
+	public static void main(String[] args) {
+	    Random r = new Random();
+	    Scanner s = new Scanner(System.in);
+	    arrayCreator a = new arrayCreator();
+	    int elements = 0, upper = 0, lower = 0;
+		ArrayList<Integer> array = new ArrayList<Integer>();
+		
+		System.out.print("Input amount of elements: ");
+		elements = s.nextInt();
+		System.out.print("Lower Bound: ");
+		lower = s.nextInt();
+		System.out.print("Upper Bound: ");
+		upper = s.nextInt();
+		
+		for(int i = 0; i < elements; i++){
+		    array.add(r.nextInt(upper - lower) + lower + 1);
+		}
+		System.out.println("Unsorted Array: " + array);
+		selectionSort(array);
+		System.out.println("Sorted Array: " + array);
+	}
+}
