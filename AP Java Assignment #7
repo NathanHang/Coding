@@ -23,9 +23,14 @@ public class Cat {
     public int id;
     
     public Cat(String name, int age, String catBreed, int id) {
-        
+        super(name, age);
+        this.catBreed = catBreed;
+        this.id = id;    
     }
-    
+    @Override
+    public String makeNoise(){
+        return "Meow";
+    }
 }
 //Pet.java
 public class Pet {
