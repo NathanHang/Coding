@@ -1,0 +1,94 @@
+#ifndef BST_H_
+#define BST_H_
+
+#include <cstddef>
+#include <iostream>
+#include <assert.h>
+#include <string>
+
+using namespace std;
+
+class BST {
+private:
+	struct Node {
+		int data;
+		Node* left;
+		Node* right;
+
+		Node(int newdata) :
+				data(newdata), left(NULL), right(NULL) {
+		}
+	};
+
+	typedef struct Node* NodePtr;
+	NodePtr root;
+
+	/**Private helper functions*/
+	void destructorHelper(NodePtr root);
+
+	bool find(int value);
+
+	int minimumHelper(NodePtr);
+
+	int maximumHelper(NodePtr);
+
+	int getSizeHelper(NodePtr);
+
+	bool findHelper(NodePtr, int);
+
+	void insertHelper(NodePtr, int);
+	//private helper function for insert
+	//recursively inserts a value into the BST
+
+	NodePtr removeHelper(NodePtr, int);
+
+	void inOrderPrintHelper(NodePtr);
+
+	/**Public functions*/
+public:
+	BST(){
+	    
+	};
+
+	~BST(){
+	    destructorHelper(root);
+	};
+
+	/*Access function*/
+	int minimum();
+	//finds the minimum value in the Binary Search Tree and returns it
+	//pre: !isEmpty()
+
+	int maximum();
+	//finds the maximum value in the Binary Search Tree and returns it
+	//pre: !isEmpty()
+	
+
+	bool isEmpty();
+	//returns whether the tree is empty
+
+	int getSize();
+	//returns the size of the tree
+
+	/*Manipulating function*/
+	void insert(int value);
+	//adds the specified value to the tree
+
+	void remove(int value);
+	//removes the specified value from the tree
+	//Pre: !isEmpty()
+	//Pre: The value is contained in the Binary Search Tree
+
+	/*Additional function*/
+	void inOrderPrint();
+
+	void print_stat();
+	//use minimum(), maximum(), getSize(),
+
+
+};
+
+void BST::destructorHelper(NodePtr root){
+    
+}
+#endif /* BST_H_ */
